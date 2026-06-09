@@ -3,20 +3,24 @@
 > Aplicación de escritorio en Java para gestionar las líneas de transmisión eléctrica de la SubÁrea Santander del Sistema Interconectado Nacional de Colombia.  
 > Desarrollada con **Java Swing**, arquitectura **MVC**, mapa interactivo con **JXMapViewer** y datos reales de **PARATEC - XM**.
 
+**Autores:** Andres Ramos · Manuel Amell
+
 ---
 
 ## Tabla de Contenidos
 
-1. [Resumen del Proyecto](#-resumen-del-proyecto)
-2. [Tecnologías Utilizadas](#-tecnologías-utilizadas)
-3. [Arquitectura MVC](#-arquitectura-mvc)
-4. [Estructura de Carpetas](#-estructura-de-carpetas)
-5. [Capa Modelo](#-capa-modelo)
-6. [Capa Persistencia](#-capa-persistencia)
-7. [Capa Controlador](#-capa-controlador)
-8. [Capa Vista](#-capa-vista)
-9. [Datos del Proyecto](#-datos-del-proyecto)
-10. [Errores Comunes](#-errores-comunes-y-soluciones)
+1. [Resumen del Proyecto](#resumen-del-proyecto)
+2. [Cumplimiento según la rúbrica](#cumplimiento-según-la-rúbrica)
+3. [Entregables del PDF](#entregables-del-pdf)
+4. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+5. [Arquitectura MVC](#arquitectura-mvc)
+6. [Estructura de Carpetas](#estructura-de-carpetas)
+7. [Capa Modelo](#capa-modelo)
+8. [Capa Persistencia](#capa-persistencia)
+9. [Capa Controlador](#capa-controlador)
+10. [Capa Vista](#capa-vista)
+11. [Datos del Proyecto](#datos-del-proyecto)
+12. [Errores Comunes](#errores-comunes-y-soluciones)
 
 ---
 
@@ -33,7 +37,7 @@ Esta aplicación permite gestionar las **52 líneas de transmisión reales** de 
 | **Editar** | Modificar cualquier línea existente (doble clic o botón) |
 | **Eliminar** | Borrar líneas con confirmación |
 | **Buscar** | Búsqueda en tiempo real por nombre, municipio o subestación |
-| **Filtrar** | Por nivel de voltaje (115 / 230 / 500 kV) y por operador |
+| **Filtrar** | Por nivel de voltaje (115 / 230 / 500 kV) y por operador *(el PDF sugiere filtro por departamento; ver tabla de pendientes)* |
 | **Guardar CSV** | Exportar el estado actual a un archivo `.csv` |
 | **Abrir CSV** | Importar líneas desde un archivo `.csv` |
 | **Mapa** | Visualizar subestaciones y líneas sobre mapa real de Santander |
@@ -41,17 +45,86 @@ Esta aplicación permite gestionar las **52 líneas de transmisión reales** de 
 
 ---
 
+## Cumplimiento según la rúbrica
+
+Los requisitos de este proyecto provienen del documento [`ProyectoFinal_LineasTransmision.pdf`](ProyectoFinal_LineasTransmision.pdf) (*Caso de Estudio: Gestión de Líneas de Transmisión del Sistema Eléctrico Nacional — POO*). El PDF permite elegir entre varias regiones; **esta implementación cubre la SubÁrea Santander**.
+
+### Criterios de evaluación (referencia del PDF)
+
+| Criterio | Ponderación |
+|---|---|
+| Diseño orientado a objetos (encapsulamiento, relaciones, UML) | 25% |
+| Implementación en Java (programación y estructura) | 25% |
+| Interfaz gráfica (CRUD-S funcional) | 20% |
+| Persistencia (abrir y guardar archivos) | 20% |
+| Extensión (mapa o visualización adicional) | 10% |
+
+### Requisitos cumplidos
+
+| Criterio / Requisito (PDF) | Estado | Evidencia en el repo |
+|---|---|---|
+| **Diseño POO (25%)** — Encapsulamiento con atributos privados, getters y setters | Cumplido | [`LineaTransmision.java`](SistemaElectricoSantander/src/modelo/LineaTransmision.java), [`Subestacion.java`](SistemaElectricoSantander/src/modelo/Subestacion.java) |
+| Clases de dominio: línea, subestación, sistema | Cumplido | [`SistemaElectrico.java`](SistemaElectricoSantander/src/modelo/SistemaElectrico.java) |
+| Método de negocio `calcularCapacidadMW` con pf = 0.95 | Cumplido | `LineaTransmision.calcularCapacidadMW` |
+| Arquitectura MVC (modelo, vista, controlador, persistencia) | Cumplido | Paquetes `modelo/`, `vista/`, `controlador/`, `persistencia/` |
+| **Implementación Java (25%)** — Proyecto NetBeans/Ant | Cumplido | [`build.xml`](SistemaElectricoSantander/build.xml), [`nbproject/`](SistemaElectricoSantander/nbproject/) |
+| Estructura de paquetes según Fase 2 del PDF | Cumplido | 9 clases Java en `src/` |
+| Datos reales de PARATEC | Cumplido | [`data/lineas.csv`](SistemaElectricoSantander/data/lineas.csv), [`data/subestaciones.csv`](SistemaElectricoSantander/data/subestaciones.csv) |
+| **Interfaz gráfica (20%)** — CRUD completo de líneas | Cumplido | [`VentanaPrincipal.java`](SistemaElectricoSantander/src/vista/VentanaPrincipal.java), [`DialogoLinea.java`](SistemaElectricoSantander/src/vista/DialogoLinea.java) |
+| Buscar (CRUD-S) | Cumplido | Campo de búsqueda + `SistemaElectrico.buscarLineas` |
+| Validación de campos vacíos o negativos | Parcialmente cumplido | [`Controlador.java`](SistemaElectricoSantander/src/controlador/Controlador.java) valida nombre, operador (solo al crear), voltaje, corriente y longitud |
+| **Persistencia (20%)** — Abrir y guardar CSV | Cumplido | [`GestorCSV.java`](SistemaElectricoSantander/src/persistencia/GestorCSV.java) + botones en la barra de herramientas |
+| Parser CSV con campos entre comillas | Cumplido | `GestorCSV.parsearCSV` |
+| **Extensión mapa (10%)** — Visualización geográfica | Cumplido | [`PanelMapa.java`](SistemaElectricoSantander/src/vista/PanelMapa.java) con JXMapViewer + OpenStreetMap |
+| Filtro por voltaje (Fase 4) | Cumplido | Combo en `VentanaPrincipal` |
+| Capacidad total del sistema (Fase 4) | Parcialmente cumplido | `calcularCapacidadTotal()` + barra de estado y diálogo de estadísticas (resumen, no simulación) |
+
+### Requisitos pendientes, incorrectos o incompletos
+
+| Criterio / Requisito | Problema | Impacto | Acción sugerida |
+|---|---|---|---|
+| **Entregable 1** — Diagrama UML (`.png` / `.uml`) | No existe en el repositorio | Afecta criterio de diseño POO (25%) | Crear diagrama de clases y versionarlo en el repo |
+| **Entregable 2** — Proyecto NetBeans (`.zip`) | El código fuente existe, pero no hay `.zip` de entrega ni JAR en `dist/` | Entregable formal incompleto | Empaquetar el proyecto y generar el JAR ejecutable |
+| **Entregable 3** — Informe breve (`.pdf`, opcional) | No incluido | Recomendado para documentar el diseño | Redactar informe con capturas de pantalla |
+| **Entregable 4** — Datos fuente (`.xlsx` de PARATEC) | Solo hay CSV derivado | Formato de entrega distinto al solicitado | Adjuntar el `.xlsx` original exportado de PARATEC |
+| Clase `Conexion` en modelo UML (objetivo específico 1) | No existe; la conexión es implícita vía strings origen/destino | Relaciones UML incompletas | Documentar en el diagrama UML o agregar enlace explícito |
+| Persistencia JSON (Fase 3) | Solo CSV implementado | Requisito alternativo no cubierto | Implementar JSON o documentar CSV como elección justificada |
+| Filtro por **departamento** (Fase 4.2) | No existe `filtrarPorDepartamento`; hay filtro por **operador** | Extensión parcial respecto al PDF | Añadir filtro por departamento |
+| Simulación de carga (Fase 4.3) | Solo estadísticas agregadas (MW/km totales), sin simulación | Extensión parcial | Implementar simulador de carga o renombrar como resumen de capacidad |
+| Validación completa (Fase 3) | `actualizarLinea` no valida operador vacío; no valida subestaciones existentes; posible NPE si campos CSV son `null` en búsqueda | Riesgo de datos inconsistentes | Endurecer validaciones en el controlador |
+| CRUD de subestaciones | Solo lectura desde CSV; `guardarSubestaciones` sin exponer en UI/controlador | Fuera del mínimo, pero incompleto | Opcional: CRUD o guardado de subestaciones |
+| Dependencias JAR (`lib/`) | La carpeta `lib/` **no existe** en el repo; [`project.properties`](SistemaElectricoSantander/nbproject/project.properties) apunta a rutas Windows absolutas | Proyecto no portable (falla en Linux) | Crear `lib/`, versionar JARs y actualizar el classpath |
+| Versión Java documentada | El README anterior decía "17+"; el proyecto compila con **Java 26** | Documentación desalineada con el código | Usar JDK 26 según `project.properties` |
+| Mapa vs filtros | El mapa muestra **todas** las líneas aunque la tabla esté filtrada | UX inconsistente | Sincronizar el mapa con los filtros activos |
+| Estadísticas vs filtros | La barra inferior muestra totales globales, no del subconjunto filtrado | Estadísticas engañosas al filtrar | Calcular sobre la lista visible |
+| Combo de operadores | No se refresca tras "Abrir CSV" | Filtro desactualizado | Repoblar el combo al cargar un archivo |
+
+---
+
+## Entregables del PDF
+
+| # | Entregable | Formato requerido | Estado en el repo |
+|---|---|---|---|
+| 1 | Modelo UML (clases, relaciones, atributos, métodos) | `.png` o `.uml` | **Pendiente** — no incluido |
+| 2 | Proyecto NetBeans funcional con GUI y CRUD-S | `.zip` | **Parcial** — código en [`SistemaElectricoSantander/`](SistemaElectricoSantander/), sin zip de entrega |
+| 3 | Informe breve con diseño y capturas | `.pdf` (opcional) | **Pendiente** — no incluido |
+| 4 | Datos técnicos de líneas de transmisión (PARATEC) | `.xlsx` | **Parcial** — datos en CSV en [`data/`](SistemaElectricoSantander/data/), sin `.xlsx` original |
+
+---
+
 ## Tecnologías Utilizadas
 
 | Tecnología | Versión | Uso |
 |---|---|---|
-| Java | 17+ | Lenguaje principal |
+| Java | 26 | Lenguaje principal (según `nbproject/project.properties`) |
 | Java Swing | JDK built-in | Interfaz gráfica (GUI) |
 | JXMapViewer2 | 2.6 | Mapa geográfico con OpenStreetMap |
 | commons-logging | 1.2 | Dependencia requerida por JXMapViewer |
 | NetBeans IDE | 17+ | Entorno de desarrollo |
 | CSV | — | Formato de persistencia de datos |
 | PARATEC - XM | — | Fuente de datos oficiales |
+
+> **Dependencias externas:** Los JAR de JXMapViewer y commons-logging deben estar en el classpath. Actualmente [`project.properties`](SistemaElectricoSantander/nbproject/project.properties) referencia rutas absolutas de Windows (`C:\Users\RYZEN\Downloads\...`). Para portabilidad, crear la carpeta `lib/`, copiar los JAR allí y actualizar el classpath en NetBeans.
 
 ---
 
@@ -109,11 +182,15 @@ SistemaElectricoSantander/
 ├── data/
 │   ├── lineas.csv                       ← 52 líneas reales de Santander
 │   └── subestaciones.csv                ← 34 subestaciones con coordenadas
-├── lib/
-│   ├── jxmapviewer2-2.6.jar             ← Librería del mapa (agregar al Classpath)
+├── lib/                                 ← Pendiente: no existe en el repo actual
+│   ├── jxmapviewer2-2.6.jar             ← Crear carpeta y agregar al Classpath
 │   └── commons-logging-1.2.jar          ← Dependencia requerida por JXMapViewer
-└── README.md
+├── nbproject/                           ← Configuración del proyecto NetBeans
+├── build.xml                            ← Script de compilación Ant
+└── dist/                                ← Salida del JAR (generar con Clean and Build)
 ```
+
+> La carpeta `lib/` está documentada como ubicación recomendada para los JAR, pero **aún no está versionada** en el repositorio. Ver [Errores Comunes](#errores-comunes-y-soluciones) para configurar las dependencias.
 
 ---
 
@@ -466,7 +543,7 @@ Los datos técnicos provienen de **[PARATEC - XM](https://paractec.xm.com.co)**,
 | `0 líneas cargadas` al abrir CSV | Formato del CSV no compatible | Usar el CSV original descargado con el proyecto |
 | Mapa gris sin tiles | Sin conexión a internet | Normal — las subestaciones igual se muestran |
 | Pantalla en blanco (componentes invisibles) | Incompatibilidad JDK 26 con DirectDraw | Agregar `System.setProperty("sun.java2d.noddraw", "true")` en `Main.java` |
-| `BUILD FAILED` al compilar | Versión de Java incompatible | Verificar que sea JDK 17 o superior |
+| `BUILD FAILED` al compilar | Versión de Java incompatible o JARs no encontrados | Usar JDK 26 y verificar classpath en `project.properties` |
 | Caracteres extraños en tildes | Codificación del CSV incorrecta | Guardar el CSV en **UTF-8** (verificar con Notepad++) |
 | `incompatible types: Point2D cannot be converted to Point` | Versión de JXMapViewer incompatible | Usar el `PanelMapa.java` corregido con `Point2D` |
 
