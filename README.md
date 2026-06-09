@@ -11,16 +11,15 @@
 
 1. [Resumen del Proyecto](#resumen-del-proyecto)
 2. [Cumplimiento según la rúbrica](#cumplimiento-según-la-rúbrica)
-3. [Entregables del PDF](#entregables-del-pdf)
-4. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-5. [Arquitectura MVC](#arquitectura-mvc)
-6. [Estructura de Carpetas](#estructura-de-carpetas)
-7. [Capa Modelo](#capa-modelo)
-8. [Capa Persistencia](#capa-persistencia)
-9. [Capa Controlador](#capa-controlador)
-10. [Capa Vista](#capa-vista)
-11. [Datos del Proyecto](#datos-del-proyecto)
-12. [Errores Comunes](#errores-comunes-y-soluciones)
+3. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+4. [Arquitectura MVC](#arquitectura-mvc)
+5. [Estructura de Carpetas](#estructura-de-carpetas)
+6. [Capa Modelo](#capa-modelo)
+7. [Capa Persistencia](#capa-persistencia)
+8. [Capa Controlador](#capa-controlador)
+9. [Capa Vista](#capa-vista)
+10. [Datos del Proyecto](#datos-del-proyecto)
+11. [Errores Comunes](#errores-comunes-y-soluciones)
 
 ---
 
