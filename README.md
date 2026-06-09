@@ -16,9 +16,7 @@
 7. [Capa Controlador](#-capa-controlador)
 8. [Capa Vista](#-capa-vista)
 9. [Datos del Proyecto](#-datos-del-proyecto)
-10. [Configuración en NetBeans](#-configuración-en-netbeans-paso-a-paso)
-11. [Ejecutar en Otro Dispositivo](#-ejecutar-en-otro-dispositivo)
-12. [Errores Comunes](#-errores-comunes-y-soluciones)
+10. [Errores Comunes](#-errores-comunes-y-soluciones)
 
 ---
 
