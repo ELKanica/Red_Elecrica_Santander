@@ -5,7 +5,7 @@
 
 ---
 
-## 📋 Tabla de Contenidos
+## Tabla de Contenidos
 
 1. [Resumen del Proyecto](#-resumen-del-proyecto)
 2. [Tecnologías Utilizadas](#-tecnologías-utilizadas)
@@ -22,7 +22,7 @@
 
 ---
 
-## 📌 Resumen del Proyecto
+## Resumen del Proyecto
 
 Esta aplicación permite gestionar las **52 líneas de transmisión reales** de la SubÁrea Santander registradas en PARATEC. Implementa un CRUD-S completo con interfaz gráfica Swing y visualización geográfica sobre un mapa real de OpenStreetMap.
 
@@ -43,7 +43,7 @@ Esta aplicación permite gestionar las **52 líneas de transmisión reales** de 
 
 ---
 
-## 🛠 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 | Tecnología | Versión | Uso |
 |---|---|---|
@@ -57,7 +57,7 @@ Esta aplicación permite gestionar las **52 líneas de transmisión reales** de 
 
 ---
 
-## 🏗 Arquitectura MVC
+## Arquitectura MVC
 
 El proyecto sigue el patrón **Modelo - Vista - Controlador**, que separa claramente cada responsabilidad:
 
@@ -90,7 +90,7 @@ El proyecto sigue el patrón **Modelo - Vista - Controlador**, que separa claram
 
 ---
 
-## 📁 Estructura de Carpetas
+## Estructura de Carpetas
 
 ```
 SistemaElectricoSantander/
