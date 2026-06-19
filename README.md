@@ -59,7 +59,7 @@ Los requisitos de este proyecto provienen del documento [`ProyectoFinal_LineasTr
 | Java Swing | JDK built-in | Interfaz gráfica (GUI) |
 | JXMapViewer2 | 2.6 | Mapa geográfico con OpenStreetMap |
 | commons-logging | 1.2 | Dependencia requerida por JXMapViewer |
-| NetBeans IDE | 17+ | Entorno de desarrollo |
+| NetBeans IDE | — | Entorno de desarrollo |
 | CSV | — | Formato de persistencia de datos |
 | PARATEC - XM | — | Fuente de datos oficiales |
 
