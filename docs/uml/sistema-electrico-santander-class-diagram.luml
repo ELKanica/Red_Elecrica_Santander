@@ -1,0 +1,3592 @@
+{
+  "_lumlVersion": "2.0",
+  "exportType": "diagram",
+  "diagramId": "diagram-red-electrica-santander",
+  "diagramName": "Sistema Electrico Santander - Class Diagram",
+  "model": {
+    "id": "model-red-electrica",
+    "name": "Sistema Electrico Santander",
+    "version": "1.0.0",
+    "packages": {
+      "pkg-modelo": {
+        "id": "pkg-modelo",
+        "kind": "PACKAGE",
+        "name": "modelo",
+        "packageIds": [],
+        "classIds": [
+          "cls-modelo-Generador",
+          "cls-modelo-LineaTransmision",
+          "cls-modelo-SistemaElectrico",
+          "cls-modelo-Subestacion"
+        ],
+        "interfaceIds": [],
+        "enumIds": [],
+        "dataTypeIds": []
+      },
+      "pkg-controlador": {
+        "id": "pkg-controlador",
+        "kind": "PACKAGE",
+        "name": "controlador",
+        "packageIds": [],
+        "classIds": [
+          "cls-controlador-Controlador"
+        ],
+        "interfaceIds": [],
+        "enumIds": [],
+        "dataTypeIds": []
+      },
+      "pkg-vista": {
+        "id": "pkg-vista",
+        "kind": "PACKAGE",
+        "name": "vista",
+        "packageIds": [],
+        "classIds": [
+          "cls-vista-VentanaPrincipal",
+          "cls-vista-DialogoLinea",
+          "cls-vista-PanelMapa"
+        ],
+        "interfaceIds": [],
+        "enumIds": [],
+        "dataTypeIds": []
+      },
+      "pkg-persistencia": {
+        "id": "pkg-persistencia",
+        "kind": "PACKAGE",
+        "name": "persistencia",
+        "packageIds": [],
+        "classIds": [
+          "cls-persistencia-GestorCSV"
+        ],
+        "interfaceIds": [],
+        "enumIds": [],
+        "dataTypeIds": []
+      }
+    },
+    "classes": {
+      "cls-modelo-LineaTransmision": {
+        "id": "cls-modelo-LineaTransmision",
+        "kind": "CLASS",
+        "name": "LineaTransmision",
+        "attributeIds": [
+          "attr-cls-modelo-LineaTransmision-id",
+          "attr-cls-modelo-LineaTransmision-nombre",
+          "attr-cls-modelo-LineaTransmision-operador",
+          "attr-cls-modelo-LineaTransmision-estado",
+          "attr-cls-modelo-LineaTransmision-fechaPuestaOperacion",
+          "attr-cls-modelo-LineaTransmision-tipoUso",
+          "attr-cls-modelo-LineaTransmision-subestacionOrigen",
+          "attr-cls-modelo-LineaTransmision-subestacionDestino",
+          "attr-cls-modelo-LineaTransmision-voltajeNominalKV",
+          "attr-cls-modelo-LineaTransmision-corrienteNominalA",
+          "attr-cls-modelo-LineaTransmision-capacidadMW",
+          "attr-cls-modelo-LineaTransmision-longitudKm",
+          "attr-cls-modelo-LineaTransmision-municipio",
+          "attr-cls-modelo-LineaTransmision-departamento",
+          "attr-cls-modelo-LineaTransmision-subarea"
+        ],
+        "operationIds": [
+          "op-cls-modelo-LineaTransmision-LineaTransmision-empty",
+          "op-cls-modelo-LineaTransmision-LineaTransmision",
+          "op-cls-modelo-LineaTransmision-calcularCapacidadMW",
+          "op-cls-modelo-LineaTransmision-getId",
+          "op-cls-modelo-LineaTransmision-setId",
+          "op-cls-modelo-LineaTransmision-getNombre",
+          "op-cls-modelo-LineaTransmision-setNombre",
+          "op-cls-modelo-LineaTransmision-getOperador",
+          "op-cls-modelo-LineaTransmision-setOperador",
+          "op-cls-modelo-LineaTransmision-getEstado",
+          "op-cls-modelo-LineaTransmision-setEstado",
+          "op-cls-modelo-LineaTransmision-getFechaPuestaOperacion",
+          "op-cls-modelo-LineaTransmision-setFechaPuestaOperacion",
+          "op-cls-modelo-LineaTransmision-getTipoUso",
+          "op-cls-modelo-LineaTransmision-setTipoUso",
+          "op-cls-modelo-LineaTransmision-getSubestacionOrigen",
+          "op-cls-modelo-LineaTransmision-setSubestacionOrigen",
+          "op-cls-modelo-LineaTransmision-getSubestacionDestino",
+          "op-cls-modelo-LineaTransmision-setSubestacionDestino",
+          "op-cls-modelo-LineaTransmision-getVoltajeNominalKV",
+          "op-cls-modelo-LineaTransmision-setVoltajeNominalKV",
+          "op-cls-modelo-LineaTransmision-getCorrienteNominalA",
+          "op-cls-modelo-LineaTransmision-setCorrienteNominalA",
+          "op-cls-modelo-LineaTransmision-getCapacidadMW",
+          "op-cls-modelo-LineaTransmision-setCapacidadMW",
+          "op-cls-modelo-LineaTransmision-getLongitudKm",
+          "op-cls-modelo-LineaTransmision-setLongitudKm",
+          "op-cls-modelo-LineaTransmision-getMunicipio",
+          "op-cls-modelo-LineaTransmision-setMunicipio",
+          "op-cls-modelo-LineaTransmision-getDepartamento",
+          "op-cls-modelo-LineaTransmision-setDepartamento",
+          "op-cls-modelo-LineaTransmision-getSubarea",
+          "op-cls-modelo-LineaTransmision-setSubarea",
+          "op-cls-modelo-LineaTransmision-toString"
+        ],
+        "visibility": "public",
+        "isAbstract": false,
+        "packageId": "pkg-modelo",
+        "packageName": "modelo"
+      },
+      "cls-modelo-Subestacion": {
+        "id": "cls-modelo-Subestacion",
+        "kind": "CLASS",
+        "name": "Subestacion",
+        "attributeIds": [
+          "attr-cls-modelo-Subestacion-id",
+          "attr-cls-modelo-Subestacion-nombre",
+          "attr-cls-modelo-Subestacion-municipio",
+          "attr-cls-modelo-Subestacion-departamento",
+          "attr-cls-modelo-Subestacion-latitud",
+          "attr-cls-modelo-Subestacion-longitud"
+        ],
+        "operationIds": [
+          "op-cls-modelo-Subestacion-Subestacion-empty",
+          "op-cls-modelo-Subestacion-Subestacion",
+          "op-cls-modelo-Subestacion-getId",
+          "op-cls-modelo-Subestacion-setId",
+          "op-cls-modelo-Subestacion-getNombre",
+          "op-cls-modelo-Subestacion-setNombre",
+          "op-cls-modelo-Subestacion-getMunicipio",
+          "op-cls-modelo-Subestacion-setMunicipio",
+          "op-cls-modelo-Subestacion-getDepartamento",
+          "op-cls-modelo-Subestacion-setDepartamento",
+          "op-cls-modelo-Subestacion-getLatitud",
+          "op-cls-modelo-Subestacion-setLatitud",
+          "op-cls-modelo-Subestacion-getLongitud",
+          "op-cls-modelo-Subestacion-setLongitud",
+          "op-cls-modelo-Subestacion-toString"
+        ],
+        "visibility": "public",
+        "isAbstract": false,
+        "packageId": "pkg-modelo",
+        "packageName": "modelo"
+      },
+      "cls-modelo-SistemaElectrico": {
+        "id": "cls-modelo-SistemaElectrico",
+        "kind": "CLASS",
+        "name": "SistemaElectrico",
+        "attributeIds": [
+          "attr-cls-modelo-SistemaElectrico-lineas",
+          "attr-cls-modelo-SistemaElectrico-subestaciones",
+          "attr-cls-modelo-SistemaElectrico-generadores",
+          "attr-cls-modelo-SistemaElectrico-nextId"
+        ],
+        "operationIds": [
+          "op-cls-modelo-SistemaElectrico-SistemaElectrico-empty",
+          "op-cls-modelo-SistemaElectrico-agregarLinea",
+          "op-cls-modelo-SistemaElectrico-eliminarLinea",
+          "op-cls-modelo-SistemaElectrico-actualizarLinea",
+          "op-cls-modelo-SistemaElectrico-buscarLineaPorId",
+          "op-cls-modelo-SistemaElectrico-buscarLineas",
+          "op-cls-modelo-SistemaElectrico-filtrarPorVoltaje",
+          "op-cls-modelo-SistemaElectrico-filtrarPorOperador",
+          "op-cls-modelo-SistemaElectrico-getLineas",
+          "op-cls-modelo-SistemaElectrico-setLineas",
+          "op-cls-modelo-SistemaElectrico-getSubestaciones",
+          "op-cls-modelo-SistemaElectrico-getGeneradores",
+          "op-cls-modelo-SistemaElectrico-setSubestaciones",
+          "op-cls-modelo-SistemaElectrico-setGeneradores",
+          "op-cls-modelo-SistemaElectrico-buscarSubestacionPorNombre",
+          "op-cls-modelo-SistemaElectrico-buscarGeneradorPorNombre",
+          "op-cls-modelo-SistemaElectrico-calcularCapacidadTotal",
+          "op-cls-modelo-SistemaElectrico-calcularLongitudTotal",
+          "op-cls-modelo-SistemaElectrico-getOperadoresUnicos",
+          "op-cls-modelo-SistemaElectrico-getVoltajesUnicos"
+        ],
+        "visibility": "public",
+        "isAbstract": false,
+        "packageId": "pkg-modelo",
+        "packageName": "modelo"
+      },
+      "cls-controlador-Controlador": {
+        "id": "cls-controlador-Controlador",
+        "kind": "CLASS",
+        "name": "Controlador",
+        "attributeIds": [
+          "attr-cls-controlador-Controlador-sistema",
+          "attr-cls-controlador-Controlador-gestorCSV"
+        ],
+        "operationIds": [
+          "op-cls-controlador-Controlador-Controlador-empty",
+          "op-cls-controlador-Controlador-cargarDatosIniciales",
+          "op-cls-controlador-Controlador-agregarLinea",
+          "op-cls-controlador-Controlador-actualizarLinea",
+          "op-cls-controlador-Controlador-eliminarLinea",
+          "op-cls-controlador-Controlador-obtenerTodasLineas",
+          "op-cls-controlador-Controlador-buscarLineas",
+          "op-cls-controlador-Controlador-filtrarPorVoltaje",
+          "op-cls-controlador-Controlador-filtrarPorOperador",
+          "op-cls-controlador-Controlador-guardarLineas",
+          "op-cls-controlador-Controlador-cargarLineas",
+          "op-cls-controlador-Controlador-obtenerSubestaciones",
+          "op-cls-controlador-Controlador-obtenerGeneradores",
+          "op-cls-controlador-Controlador-getCapacidadTotal",
+          "op-cls-controlador-Controlador-getLongitudTotal",
+          "op-cls-controlador-Controlador-getOperadores",
+          "op-cls-controlador-Controlador-getVoltajes",
+          "op-cls-controlador-Controlador-getTotalLineas"
+        ],
+        "visibility": "public",
+        "isAbstract": false,
+        "packageId": "pkg-controlador",
+        "packageName": "controlador"
+      },
+      "cls-persistencia-GestorCSV": {
+        "id": "cls-persistencia-GestorCSV",
+        "kind": "CLASS",
+        "name": "GestorCSV",
+        "attributeIds": [
+          "attr-cls-persistencia-GestorCSV-HEADER_LINEAS",
+          "attr-cls-persistencia-GestorCSV-HEADER_SUBS",
+          "attr-cls-persistencia-GestorCSV-HEADER_GENS"
+        ],
+        "operationIds": [
+          "op-cls-persistencia-GestorCSV-guardarLineas",
+          "op-cls-persistencia-GestorCSV-cargarLineas",
+          "op-cls-persistencia-GestorCSV-guardarSubestaciones",
+          "op-cls-persistencia-GestorCSV-cargarSubestaciones",
+          "op-cls-persistencia-GestorCSV-guardarGeneradores",
+          "op-cls-persistencia-GestorCSV-cargarGeneradores",
+          "op-cls-persistencia-GestorCSV-escapar",
+          "op-cls-persistencia-GestorCSV-parsearCSV",
+          "op-cls-persistencia-GestorCSV-parsearDouble",
+          "op-cls-persistencia-GestorCSV-parsearInt"
+        ],
+        "visibility": "public",
+        "isAbstract": false,
+        "packageId": "pkg-persistencia",
+        "packageName": "persistencia"
+      },
+      "cls-default-Main": {
+        "id": "cls-default-Main",
+        "kind": "CLASS",
+        "name": "Main",
+        "attributeIds": [],
+        "operationIds": [
+          "op-cls-default-Main-main"
+        ],
+        "visibility": "public",
+        "isAbstract": false
+      },
+      "cls-vista-VentanaPrincipal": {
+        "id": "cls-vista-VentanaPrincipal",
+        "kind": "CLASS",
+        "name": "VentanaPrincipal",
+        "attributeIds": [
+          "attr-cls-vista-VentanaPrincipal-controlador",
+          "attr-cls-vista-VentanaPrincipal-modeloTabla",
+          "attr-cls-vista-VentanaPrincipal-tabla",
+          "attr-cls-vista-VentanaPrincipal-txtBuscar",
+          "attr-cls-vista-VentanaPrincipal-cmbFiltroVoltaje",
+          "attr-cls-vista-VentanaPrincipal-cmbFiltroOperador",
+          "attr-cls-vista-VentanaPrincipal-lblCapacidadTotal",
+          "attr-cls-vista-VentanaPrincipal-lblLongitudTotal",
+          "attr-cls-vista-VentanaPrincipal-lblTotalLineas",
+          "attr-cls-vista-VentanaPrincipal-panelMapa",
+          "attr-cls-vista-VentanaPrincipal-COLUMNAS"
+        ],
+        "operationIds": [
+          "op-cls-vista-VentanaPrincipal-VentanaPrincipal",
+          "op-cls-vista-VentanaPrincipal-configurarVentana",
+          "op-cls-vista-VentanaPrincipal-construirUI",
+          "op-cls-vista-VentanaPrincipal-crearBarraHerramientas",
+          "op-cls-vista-VentanaPrincipal-botonToolbar",
+          "op-cls-vista-VentanaPrincipal-crearPanelIzquierdo",
+          "op-cls-vista-VentanaPrincipal-crearPanelFiltros",
+          "op-cls-vista-VentanaPrincipal-crearTabla",
+          "op-cls-vista-VentanaPrincipal-crearPanelMapa",
+          "op-cls-vista-VentanaPrincipal-crearBarraEstado",
+          "op-cls-vista-VentanaPrincipal-crearMenuBar",
+          "op-cls-vista-VentanaPrincipal-menuItem",
+          "op-cls-vista-VentanaPrincipal-accionNueva",
+          "op-cls-vista-VentanaPrincipal-accionEditar",
+          "op-cls-vista-VentanaPrincipal-accionEliminar",
+          "op-cls-vista-VentanaPrincipal-accionGuardar",
+          "op-cls-vista-VentanaPrincipal-actualizarTabla",
+          "op-cls-vista-VentanaPrincipal-actualizarMapa",
+          "op-cls-vista-VentanaPrincipal-actualizarEstadisticas",
+          "op-cls-vista-VentanaPrincipal-mostrarEstadisticas",
+          "op-cls-vista-VentanaPrincipal-cargarDatosIniciales"
+        ],
+        "visibility": "public",
+        "isAbstract": false,
+        "packageId": "pkg-vista",
+        "packageName": "vista"
+      },
+      "cls-vista-DialogoLinea": {
+        "id": "cls-vista-DialogoLinea",
+        "kind": "CLASS",
+        "name": "DialogoLinea",
+        "attributeIds": [
+          "attr-cls-vista-DialogoLinea-txtNombre",
+          "attr-cls-vista-DialogoLinea-txtFecha",
+          "attr-cls-vista-DialogoLinea-txtLongitud",
+          "attr-cls-vista-DialogoLinea-txtOrigen",
+          "attr-cls-vista-DialogoLinea-txtDestino",
+          "attr-cls-vista-DialogoLinea-txtMunicipio",
+          "attr-cls-vista-DialogoLinea-txtDepartamento",
+          "attr-cls-vista-DialogoLinea-cmbOperador",
+          "attr-cls-vista-DialogoLinea-cmbEstado",
+          "attr-cls-vista-DialogoLinea-cmbTipoUso",
+          "attr-cls-vista-DialogoLinea-cmbVoltaje",
+          "attr-cls-vista-DialogoLinea-txtCorriente",
+          "attr-cls-vista-DialogoLinea-lblCapacidad",
+          "attr-cls-vista-DialogoLinea-confirmado",
+          "attr-cls-vista-DialogoLinea-OPERADORES"
+        ],
+        "operationIds": [
+          "op-cls-vista-DialogoLinea-DialogoLinea",
+          "op-cls-vista-DialogoLinea-crearFormulario",
+          "op-cls-vista-DialogoLinea-crearBotones",
+          "op-cls-vista-DialogoLinea-actualizarCapacidad",
+          "op-cls-vista-DialogoLinea-validar",
+          "op-cls-vista-DialogoLinea-mostrarError",
+          "op-cls-vista-DialogoLinea-cargarDatos",
+          "op-cls-vista-DialogoLinea-isConfirmado",
+          "op-cls-vista-DialogoLinea-getLinea"
+        ],
+        "visibility": "public",
+        "isAbstract": false,
+        "packageId": "pkg-vista",
+        "packageName": "vista"
+      },
+      "cls-vista-PanelMapa": {
+        "id": "cls-vista-PanelMapa",
+        "kind": "CLASS",
+        "name": "PanelMapa",
+        "attributeIds": [
+          "attr-cls-vista-PanelMapa-mapViewer",
+          "attr-cls-vista-PanelMapa-subestaciones",
+          "attr-cls-vista-PanelMapa-generadores",
+          "attr-cls-vista-PanelMapa-lineas",
+          "attr-cls-vista-PanelMapa-mostrarNombresGeneradores",
+          "attr-cls-vista-PanelMapa-COLORES_VOLTAJE",
+          "attr-cls-vista-PanelMapa-COLORES_GENERADOR"
+        ],
+        "operationIds": [
+          "op-cls-vista-PanelMapa-PanelMapa-empty",
+          "op-cls-vista-PanelMapa-inicializarMapa",
+          "op-cls-vista-PanelMapa-actualizarDatos",
+          "op-cls-vista-PanelMapa-refrescarPintores",
+          "op-cls-vista-PanelMapa-buscarSub",
+          "op-cls-vista-PanelMapa-buscarGen",
+          "op-cls-vista-PanelMapa-crearLeyenda",
+          "op-cls-vista-PanelMapa-agregarItemLeyenda"
+        ],
+        "visibility": "public",
+        "isAbstract": false,
+        "packageId": "pkg-vista",
+        "packageName": "vista"
+      },
+      "cls-modelo-Generador": {
+        "id": "cls-modelo-Generador",
+        "kind": "CLASS",
+        "name": "Generador",
+        "attributeIds": [
+          "attr-cls-modelo-Generador-id",
+          "attr-cls-modelo-Generador-nombre",
+          "attr-cls-modelo-Generador-municipio",
+          "attr-cls-modelo-Generador-departamento",
+          "attr-cls-modelo-Generador-latitud",
+          "attr-cls-modelo-Generador-longitud",
+          "attr-cls-modelo-Generador-tipoGeneracion"
+        ],
+        "operationIds": [
+          "op-cls-modelo-Generador-Generador",
+          "op-cls-modelo-Generador-getId",
+          "op-cls-modelo-Generador-setId",
+          "op-cls-modelo-Generador-getNombre",
+          "op-cls-modelo-Generador-setNombre",
+          "op-cls-modelo-Generador-getMunicipio",
+          "op-cls-modelo-Generador-setMunicipio",
+          "op-cls-modelo-Generador-getDepartamento",
+          "op-cls-modelo-Generador-setDepartamento",
+          "op-cls-modelo-Generador-getLatitud",
+          "op-cls-modelo-Generador-setLatitud",
+          "op-cls-modelo-Generador-getLongitud",
+          "op-cls-modelo-Generador-setLongitud",
+          "op-cls-modelo-Generador-setTipoGeneracion",
+          "op-cls-modelo-Generador-getTipoGeneracion",
+          "op-cls-modelo-Generador-toString"
+        ],
+        "visibility": "public",
+        "isAbstract": false,
+        "packageId": "pkg-modelo",
+        "packageName": "modelo"
+      }
+    },
+    "interfaces": {},
+    "enums": {},
+    "dataTypes": {},
+    "attributes": {
+      "attr-cls-modelo-LineaTransmision-id": {
+        "id": "attr-cls-modelo-LineaTransmision-id",
+        "kind": "ATTRIBUTE",
+        "name": "id",
+        "type": "int",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-nombre": {
+        "id": "attr-cls-modelo-LineaTransmision-nombre",
+        "kind": "ATTRIBUTE",
+        "name": "nombre",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-operador": {
+        "id": "attr-cls-modelo-LineaTransmision-operador",
+        "kind": "ATTRIBUTE",
+        "name": "operador",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-estado": {
+        "id": "attr-cls-modelo-LineaTransmision-estado",
+        "kind": "ATTRIBUTE",
+        "name": "estado",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-fechaPuestaOperacion": {
+        "id": "attr-cls-modelo-LineaTransmision-fechaPuestaOperacion",
+        "kind": "ATTRIBUTE",
+        "name": "fechaPuestaOperacion",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-tipoUso": {
+        "id": "attr-cls-modelo-LineaTransmision-tipoUso",
+        "kind": "ATTRIBUTE",
+        "name": "tipoUso",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-subestacionOrigen": {
+        "id": "attr-cls-modelo-LineaTransmision-subestacionOrigen",
+        "kind": "ATTRIBUTE",
+        "name": "subestacionOrigen",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-subestacionDestino": {
+        "id": "attr-cls-modelo-LineaTransmision-subestacionDestino",
+        "kind": "ATTRIBUTE",
+        "name": "subestacionDestino",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-voltajeNominalKV": {
+        "id": "attr-cls-modelo-LineaTransmision-voltajeNominalKV",
+        "kind": "ATTRIBUTE",
+        "name": "voltajeNominalKV",
+        "type": "double",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-corrienteNominalA": {
+        "id": "attr-cls-modelo-LineaTransmision-corrienteNominalA",
+        "kind": "ATTRIBUTE",
+        "name": "corrienteNominalA",
+        "type": "double",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-capacidadMW": {
+        "id": "attr-cls-modelo-LineaTransmision-capacidadMW",
+        "kind": "ATTRIBUTE",
+        "name": "capacidadMW",
+        "type": "double",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-longitudKm": {
+        "id": "attr-cls-modelo-LineaTransmision-longitudKm",
+        "kind": "ATTRIBUTE",
+        "name": "longitudKm",
+        "type": "double",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-municipio": {
+        "id": "attr-cls-modelo-LineaTransmision-municipio",
+        "kind": "ATTRIBUTE",
+        "name": "municipio",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-departamento": {
+        "id": "attr-cls-modelo-LineaTransmision-departamento",
+        "kind": "ATTRIBUTE",
+        "name": "departamento",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-LineaTransmision-subarea": {
+        "id": "attr-cls-modelo-LineaTransmision-subarea",
+        "kind": "ATTRIBUTE",
+        "name": "subarea",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Subestacion-id": {
+        "id": "attr-cls-modelo-Subestacion-id",
+        "kind": "ATTRIBUTE",
+        "name": "id",
+        "type": "int",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Subestacion-nombre": {
+        "id": "attr-cls-modelo-Subestacion-nombre",
+        "kind": "ATTRIBUTE",
+        "name": "nombre",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Subestacion-municipio": {
+        "id": "attr-cls-modelo-Subestacion-municipio",
+        "kind": "ATTRIBUTE",
+        "name": "municipio",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Subestacion-departamento": {
+        "id": "attr-cls-modelo-Subestacion-departamento",
+        "kind": "ATTRIBUTE",
+        "name": "departamento",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Subestacion-latitud": {
+        "id": "attr-cls-modelo-Subestacion-latitud",
+        "kind": "ATTRIBUTE",
+        "name": "latitud",
+        "type": "double",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Subestacion-longitud": {
+        "id": "attr-cls-modelo-Subestacion-longitud",
+        "kind": "ATTRIBUTE",
+        "name": "longitud",
+        "type": "double",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-SistemaElectrico-lineas": {
+        "id": "attr-cls-modelo-SistemaElectrico-lineas",
+        "kind": "ATTRIBUTE",
+        "name": "lineas",
+        "type": "List<LineaTransmision>",
+        "visibility": "private",
+        "multiplicity": "0..*"
+      },
+      "attr-cls-modelo-SistemaElectrico-subestaciones": {
+        "id": "attr-cls-modelo-SistemaElectrico-subestaciones",
+        "kind": "ATTRIBUTE",
+        "name": "subestaciones",
+        "type": "List<Subestacion>",
+        "visibility": "private",
+        "multiplicity": "0..*"
+      },
+      "attr-cls-modelo-SistemaElectrico-generadores": {
+        "id": "attr-cls-modelo-SistemaElectrico-generadores",
+        "kind": "ATTRIBUTE",
+        "name": "generadores",
+        "type": "List<Generador>",
+        "visibility": "private",
+        "multiplicity": "0..*"
+      },
+      "attr-cls-modelo-SistemaElectrico-nextId": {
+        "id": "attr-cls-modelo-SistemaElectrico-nextId",
+        "kind": "ATTRIBUTE",
+        "name": "nextId",
+        "type": "int",
+        "visibility": "private"
+      },
+      "attr-cls-controlador-Controlador-sistema": {
+        "id": "attr-cls-controlador-Controlador-sistema",
+        "kind": "ATTRIBUTE",
+        "name": "sistema",
+        "type": "SistemaElectrico",
+        "visibility": "private"
+      },
+      "attr-cls-controlador-Controlador-gestorCSV": {
+        "id": "attr-cls-controlador-Controlador-gestorCSV",
+        "kind": "ATTRIBUTE",
+        "name": "gestorCSV",
+        "type": "GestorCSV",
+        "visibility": "private"
+      },
+      "attr-cls-persistencia-GestorCSV-HEADER_LINEAS": {
+        "id": "attr-cls-persistencia-GestorCSV-HEADER_LINEAS",
+        "kind": "ATTRIBUTE",
+        "name": "HEADER_LINEAS",
+        "type": "String",
+        "visibility": "private",
+        "isStatic": true
+      },
+      "attr-cls-persistencia-GestorCSV-HEADER_SUBS": {
+        "id": "attr-cls-persistencia-GestorCSV-HEADER_SUBS",
+        "kind": "ATTRIBUTE",
+        "name": "HEADER_SUBS",
+        "type": "String",
+        "visibility": "private",
+        "isStatic": true
+      },
+      "attr-cls-persistencia-GestorCSV-HEADER_GENS": {
+        "id": "attr-cls-persistencia-GestorCSV-HEADER_GENS",
+        "kind": "ATTRIBUTE",
+        "name": "HEADER_GENS",
+        "type": "String",
+        "visibility": "private",
+        "isStatic": true
+      },
+      "attr-cls-vista-VentanaPrincipal-controlador": {
+        "id": "attr-cls-vista-VentanaPrincipal-controlador",
+        "kind": "ATTRIBUTE",
+        "name": "controlador",
+        "type": "Controlador",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-modeloTabla": {
+        "id": "attr-cls-vista-VentanaPrincipal-modeloTabla",
+        "kind": "ATTRIBUTE",
+        "name": "modeloTabla",
+        "type": "DefaultTableModel",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-tabla": {
+        "id": "attr-cls-vista-VentanaPrincipal-tabla",
+        "kind": "ATTRIBUTE",
+        "name": "tabla",
+        "type": "JTable",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-txtBuscar": {
+        "id": "attr-cls-vista-VentanaPrincipal-txtBuscar",
+        "kind": "ATTRIBUTE",
+        "name": "txtBuscar",
+        "type": "JTextField",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-cmbFiltroVoltaje": {
+        "id": "attr-cls-vista-VentanaPrincipal-cmbFiltroVoltaje",
+        "kind": "ATTRIBUTE",
+        "name": "cmbFiltroVoltaje",
+        "type": "JComboBox<String>",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-cmbFiltroOperador": {
+        "id": "attr-cls-vista-VentanaPrincipal-cmbFiltroOperador",
+        "kind": "ATTRIBUTE",
+        "name": "cmbFiltroOperador",
+        "type": "JComboBox<String>",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-lblCapacidadTotal": {
+        "id": "attr-cls-vista-VentanaPrincipal-lblCapacidadTotal",
+        "kind": "ATTRIBUTE",
+        "name": "lblCapacidadTotal",
+        "type": "JLabel",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-lblLongitudTotal": {
+        "id": "attr-cls-vista-VentanaPrincipal-lblLongitudTotal",
+        "kind": "ATTRIBUTE",
+        "name": "lblLongitudTotal",
+        "type": "JLabel",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-lblTotalLineas": {
+        "id": "attr-cls-vista-VentanaPrincipal-lblTotalLineas",
+        "kind": "ATTRIBUTE",
+        "name": "lblTotalLineas",
+        "type": "JLabel",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-panelMapa": {
+        "id": "attr-cls-vista-VentanaPrincipal-panelMapa",
+        "kind": "ATTRIBUTE",
+        "name": "panelMapa",
+        "type": "PanelMapa",
+        "visibility": "private"
+      },
+      "attr-cls-vista-VentanaPrincipal-COLUMNAS": {
+        "id": "attr-cls-vista-VentanaPrincipal-COLUMNAS",
+        "kind": "ATTRIBUTE",
+        "name": "COLUMNAS",
+        "type": "String[]",
+        "visibility": "private",
+        "isStatic": true,
+        "multiplicity": "0..*"
+      },
+      "attr-cls-vista-DialogoLinea-txtNombre": {
+        "id": "attr-cls-vista-DialogoLinea-txtNombre",
+        "kind": "ATTRIBUTE",
+        "name": "txtNombre",
+        "type": "JTextField",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-txtFecha": {
+        "id": "attr-cls-vista-DialogoLinea-txtFecha",
+        "kind": "ATTRIBUTE",
+        "name": "txtFecha",
+        "type": "JTextField",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-txtLongitud": {
+        "id": "attr-cls-vista-DialogoLinea-txtLongitud",
+        "kind": "ATTRIBUTE",
+        "name": "txtLongitud",
+        "type": "JTextField",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-txtOrigen": {
+        "id": "attr-cls-vista-DialogoLinea-txtOrigen",
+        "kind": "ATTRIBUTE",
+        "name": "txtOrigen",
+        "type": "JTextField",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-txtDestino": {
+        "id": "attr-cls-vista-DialogoLinea-txtDestino",
+        "kind": "ATTRIBUTE",
+        "name": "txtDestino",
+        "type": "JTextField",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-txtMunicipio": {
+        "id": "attr-cls-vista-DialogoLinea-txtMunicipio",
+        "kind": "ATTRIBUTE",
+        "name": "txtMunicipio",
+        "type": "JTextField",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-txtDepartamento": {
+        "id": "attr-cls-vista-DialogoLinea-txtDepartamento",
+        "kind": "ATTRIBUTE",
+        "name": "txtDepartamento",
+        "type": "JTextField",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-cmbOperador": {
+        "id": "attr-cls-vista-DialogoLinea-cmbOperador",
+        "kind": "ATTRIBUTE",
+        "name": "cmbOperador",
+        "type": "JComboBox<String>",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-cmbEstado": {
+        "id": "attr-cls-vista-DialogoLinea-cmbEstado",
+        "kind": "ATTRIBUTE",
+        "name": "cmbEstado",
+        "type": "JComboBox<String>",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-cmbTipoUso": {
+        "id": "attr-cls-vista-DialogoLinea-cmbTipoUso",
+        "kind": "ATTRIBUTE",
+        "name": "cmbTipoUso",
+        "type": "JComboBox<String>",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-cmbVoltaje": {
+        "id": "attr-cls-vista-DialogoLinea-cmbVoltaje",
+        "kind": "ATTRIBUTE",
+        "name": "cmbVoltaje",
+        "type": "JComboBox<String>",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-txtCorriente": {
+        "id": "attr-cls-vista-DialogoLinea-txtCorriente",
+        "kind": "ATTRIBUTE",
+        "name": "txtCorriente",
+        "type": "JTextField",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-lblCapacidad": {
+        "id": "attr-cls-vista-DialogoLinea-lblCapacidad",
+        "kind": "ATTRIBUTE",
+        "name": "lblCapacidad",
+        "type": "JLabel",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-confirmado": {
+        "id": "attr-cls-vista-DialogoLinea-confirmado",
+        "kind": "ATTRIBUTE",
+        "name": "confirmado",
+        "type": "boolean",
+        "visibility": "private"
+      },
+      "attr-cls-vista-DialogoLinea-OPERADORES": {
+        "id": "attr-cls-vista-DialogoLinea-OPERADORES",
+        "kind": "ATTRIBUTE",
+        "name": "OPERADORES",
+        "type": "String[]",
+        "visibility": "private",
+        "isStatic": true,
+        "multiplicity": "0..*"
+      },
+      "attr-cls-vista-PanelMapa-mapViewer": {
+        "id": "attr-cls-vista-PanelMapa-mapViewer",
+        "kind": "ATTRIBUTE",
+        "name": "mapViewer",
+        "type": "JXMapViewer",
+        "visibility": "private"
+      },
+      "attr-cls-vista-PanelMapa-subestaciones": {
+        "id": "attr-cls-vista-PanelMapa-subestaciones",
+        "kind": "ATTRIBUTE",
+        "name": "subestaciones",
+        "type": "List<Subestacion>",
+        "visibility": "private",
+        "multiplicity": "0..*"
+      },
+      "attr-cls-vista-PanelMapa-generadores": {
+        "id": "attr-cls-vista-PanelMapa-generadores",
+        "kind": "ATTRIBUTE",
+        "name": "generadores",
+        "type": "List<Generador>",
+        "visibility": "private",
+        "multiplicity": "0..*"
+      },
+      "attr-cls-vista-PanelMapa-lineas": {
+        "id": "attr-cls-vista-PanelMapa-lineas",
+        "kind": "ATTRIBUTE",
+        "name": "lineas",
+        "type": "List<LineaTransmision>",
+        "visibility": "private",
+        "multiplicity": "0..*"
+      },
+      "attr-cls-vista-PanelMapa-mostrarNombresGeneradores": {
+        "id": "attr-cls-vista-PanelMapa-mostrarNombresGeneradores",
+        "kind": "ATTRIBUTE",
+        "name": "mostrarNombresGeneradores",
+        "type": "boolean",
+        "visibility": "private"
+      },
+      "attr-cls-vista-PanelMapa-COLORES_VOLTAJE": {
+        "id": "attr-cls-vista-PanelMapa-COLORES_VOLTAJE",
+        "kind": "ATTRIBUTE",
+        "name": "COLORES_VOLTAJE",
+        "type": "Map<Double, Color>",
+        "visibility": "private",
+        "isStatic": true
+      },
+      "attr-cls-vista-PanelMapa-COLORES_GENERADOR": {
+        "id": "attr-cls-vista-PanelMapa-COLORES_GENERADOR",
+        "kind": "ATTRIBUTE",
+        "name": "COLORES_GENERADOR",
+        "type": "Map<String, Color>",
+        "visibility": "private",
+        "isStatic": true
+      },
+      "attr-cls-modelo-Generador-id": {
+        "id": "attr-cls-modelo-Generador-id",
+        "kind": "ATTRIBUTE",
+        "name": "id",
+        "type": "int",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Generador-nombre": {
+        "id": "attr-cls-modelo-Generador-nombre",
+        "kind": "ATTRIBUTE",
+        "name": "nombre",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Generador-municipio": {
+        "id": "attr-cls-modelo-Generador-municipio",
+        "kind": "ATTRIBUTE",
+        "name": "municipio",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Generador-departamento": {
+        "id": "attr-cls-modelo-Generador-departamento",
+        "kind": "ATTRIBUTE",
+        "name": "departamento",
+        "type": "String",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Generador-latitud": {
+        "id": "attr-cls-modelo-Generador-latitud",
+        "kind": "ATTRIBUTE",
+        "name": "latitud",
+        "type": "double",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Generador-longitud": {
+        "id": "attr-cls-modelo-Generador-longitud",
+        "kind": "ATTRIBUTE",
+        "name": "longitud",
+        "type": "double",
+        "visibility": "private"
+      },
+      "attr-cls-modelo-Generador-tipoGeneracion": {
+        "id": "attr-cls-modelo-Generador-tipoGeneracion",
+        "kind": "ATTRIBUTE",
+        "name": "tipoGeneracion",
+        "type": "String",
+        "visibility": "private"
+      }
+    },
+    "operations": {
+      "op-cls-modelo-LineaTransmision-LineaTransmision-empty": {
+        "id": "op-cls-modelo-LineaTransmision-LineaTransmision-empty",
+        "kind": "OPERATION",
+        "name": "LineaTransmision",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-modelo-LineaTransmision-LineaTransmision": {
+        "id": "op-cls-modelo-LineaTransmision-LineaTransmision",
+        "kind": "OPERATION",
+        "name": "LineaTransmision",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          },
+          {
+            "name": "nombre",
+            "type": "String"
+          },
+          {
+            "name": "operador",
+            "type": "String"
+          },
+          {
+            "name": "estado",
+            "type": "String"
+          },
+          {
+            "name": "fechaPuestaOperacion",
+            "type": "String"
+          },
+          {
+            "name": "tipoUso",
+            "type": "String"
+          },
+          {
+            "name": "subestacionOrigen",
+            "type": "String"
+          },
+          {
+            "name": "subestacionDestino",
+            "type": "String"
+          },
+          {
+            "name": "voltajeNominalKV",
+            "type": "double"
+          },
+          {
+            "name": "corrienteNominalA",
+            "type": "double"
+          },
+          {
+            "name": "longitudKm",
+            "type": "double"
+          },
+          {
+            "name": "municipio",
+            "type": "String"
+          },
+          {
+            "name": "departamento",
+            "type": "String"
+          },
+          {
+            "name": "subarea",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-modelo-LineaTransmision-calcularCapacidadMW": {
+        "id": "op-cls-modelo-LineaTransmision-calcularCapacidadMW",
+        "kind": "OPERATION",
+        "name": "calcularCapacidadMW",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "voltajeKV",
+            "type": "double"
+          },
+          {
+            "name": "corrienteA",
+            "type": "double"
+          },
+          {
+            "name": "pf",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-LineaTransmision-getId": {
+        "id": "op-cls-modelo-LineaTransmision-getId",
+        "kind": "OPERATION",
+        "name": "getId",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "int"
+      },
+      "op-cls-modelo-LineaTransmision-setId": {
+        "id": "op-cls-modelo-LineaTransmision-setId",
+        "kind": "OPERATION",
+        "name": "setId",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getNombre": {
+        "id": "op-cls-modelo-LineaTransmision-getNombre",
+        "kind": "OPERATION",
+        "name": "getNombre",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setNombre": {
+        "id": "op-cls-modelo-LineaTransmision-setNombre",
+        "kind": "OPERATION",
+        "name": "setNombre",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "nombre",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getOperador": {
+        "id": "op-cls-modelo-LineaTransmision-getOperador",
+        "kind": "OPERATION",
+        "name": "getOperador",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setOperador": {
+        "id": "op-cls-modelo-LineaTransmision-setOperador",
+        "kind": "OPERATION",
+        "name": "setOperador",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "operador",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getEstado": {
+        "id": "op-cls-modelo-LineaTransmision-getEstado",
+        "kind": "OPERATION",
+        "name": "getEstado",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setEstado": {
+        "id": "op-cls-modelo-LineaTransmision-setEstado",
+        "kind": "OPERATION",
+        "name": "setEstado",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "estado",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getFechaPuestaOperacion": {
+        "id": "op-cls-modelo-LineaTransmision-getFechaPuestaOperacion",
+        "kind": "OPERATION",
+        "name": "getFechaPuestaOperacion",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setFechaPuestaOperacion": {
+        "id": "op-cls-modelo-LineaTransmision-setFechaPuestaOperacion",
+        "kind": "OPERATION",
+        "name": "setFechaPuestaOperacion",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "f",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getTipoUso": {
+        "id": "op-cls-modelo-LineaTransmision-getTipoUso",
+        "kind": "OPERATION",
+        "name": "getTipoUso",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setTipoUso": {
+        "id": "op-cls-modelo-LineaTransmision-setTipoUso",
+        "kind": "OPERATION",
+        "name": "setTipoUso",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "tipoUso",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getSubestacionOrigen": {
+        "id": "op-cls-modelo-LineaTransmision-getSubestacionOrigen",
+        "kind": "OPERATION",
+        "name": "getSubestacionOrigen",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setSubestacionOrigen": {
+        "id": "op-cls-modelo-LineaTransmision-setSubestacionOrigen",
+        "kind": "OPERATION",
+        "name": "setSubestacionOrigen",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "s",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getSubestacionDestino": {
+        "id": "op-cls-modelo-LineaTransmision-getSubestacionDestino",
+        "kind": "OPERATION",
+        "name": "getSubestacionDestino",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setSubestacionDestino": {
+        "id": "op-cls-modelo-LineaTransmision-setSubestacionDestino",
+        "kind": "OPERATION",
+        "name": "setSubestacionDestino",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "s",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getVoltajeNominalKV": {
+        "id": "op-cls-modelo-LineaTransmision-getVoltajeNominalKV",
+        "kind": "OPERATION",
+        "name": "getVoltajeNominalKV",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-LineaTransmision-setVoltajeNominalKV": {
+        "id": "op-cls-modelo-LineaTransmision-setVoltajeNominalKV",
+        "kind": "OPERATION",
+        "name": "setVoltajeNominalKV",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "v",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getCorrienteNominalA": {
+        "id": "op-cls-modelo-LineaTransmision-getCorrienteNominalA",
+        "kind": "OPERATION",
+        "name": "getCorrienteNominalA",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-LineaTransmision-setCorrienteNominalA": {
+        "id": "op-cls-modelo-LineaTransmision-setCorrienteNominalA",
+        "kind": "OPERATION",
+        "name": "setCorrienteNominalA",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "c",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getCapacidadMW": {
+        "id": "op-cls-modelo-LineaTransmision-getCapacidadMW",
+        "kind": "OPERATION",
+        "name": "getCapacidadMW",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-LineaTransmision-setCapacidadMW": {
+        "id": "op-cls-modelo-LineaTransmision-setCapacidadMW",
+        "kind": "OPERATION",
+        "name": "setCapacidadMW",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "mw",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getLongitudKm": {
+        "id": "op-cls-modelo-LineaTransmision-getLongitudKm",
+        "kind": "OPERATION",
+        "name": "getLongitudKm",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-LineaTransmision-setLongitudKm": {
+        "id": "op-cls-modelo-LineaTransmision-setLongitudKm",
+        "kind": "OPERATION",
+        "name": "setLongitudKm",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "l",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getMunicipio": {
+        "id": "op-cls-modelo-LineaTransmision-getMunicipio",
+        "kind": "OPERATION",
+        "name": "getMunicipio",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setMunicipio": {
+        "id": "op-cls-modelo-LineaTransmision-setMunicipio",
+        "kind": "OPERATION",
+        "name": "setMunicipio",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "m",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getDepartamento": {
+        "id": "op-cls-modelo-LineaTransmision-getDepartamento",
+        "kind": "OPERATION",
+        "name": "getDepartamento",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setDepartamento": {
+        "id": "op-cls-modelo-LineaTransmision-setDepartamento",
+        "kind": "OPERATION",
+        "name": "setDepartamento",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "d",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-getSubarea": {
+        "id": "op-cls-modelo-LineaTransmision-getSubarea",
+        "kind": "OPERATION",
+        "name": "getSubarea",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-LineaTransmision-setSubarea": {
+        "id": "op-cls-modelo-LineaTransmision-setSubarea",
+        "kind": "OPERATION",
+        "name": "setSubarea",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "s",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-LineaTransmision-toString": {
+        "id": "op-cls-modelo-LineaTransmision-toString",
+        "kind": "OPERATION",
+        "name": "toString",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-Subestacion-Subestacion-empty": {
+        "id": "op-cls-modelo-Subestacion-Subestacion-empty",
+        "kind": "OPERATION",
+        "name": "Subestacion",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-modelo-Subestacion-Subestacion": {
+        "id": "op-cls-modelo-Subestacion-Subestacion",
+        "kind": "OPERATION",
+        "name": "Subestacion",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          },
+          {
+            "name": "nombre",
+            "type": "String"
+          },
+          {
+            "name": "municipio",
+            "type": "String"
+          },
+          {
+            "name": "departamento",
+            "type": "String"
+          },
+          {
+            "name": "latitud",
+            "type": "double"
+          },
+          {
+            "name": "longitud",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-modelo-Subestacion-getId": {
+        "id": "op-cls-modelo-Subestacion-getId",
+        "kind": "OPERATION",
+        "name": "getId",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "int"
+      },
+      "op-cls-modelo-Subestacion-setId": {
+        "id": "op-cls-modelo-Subestacion-setId",
+        "kind": "OPERATION",
+        "name": "setId",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Subestacion-getNombre": {
+        "id": "op-cls-modelo-Subestacion-getNombre",
+        "kind": "OPERATION",
+        "name": "getNombre",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-Subestacion-setNombre": {
+        "id": "op-cls-modelo-Subestacion-setNombre",
+        "kind": "OPERATION",
+        "name": "setNombre",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "nombre",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Subestacion-getMunicipio": {
+        "id": "op-cls-modelo-Subestacion-getMunicipio",
+        "kind": "OPERATION",
+        "name": "getMunicipio",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-Subestacion-setMunicipio": {
+        "id": "op-cls-modelo-Subestacion-setMunicipio",
+        "kind": "OPERATION",
+        "name": "setMunicipio",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "municipio",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Subestacion-getDepartamento": {
+        "id": "op-cls-modelo-Subestacion-getDepartamento",
+        "kind": "OPERATION",
+        "name": "getDepartamento",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-Subestacion-setDepartamento": {
+        "id": "op-cls-modelo-Subestacion-setDepartamento",
+        "kind": "OPERATION",
+        "name": "setDepartamento",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "departamento",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Subestacion-getLatitud": {
+        "id": "op-cls-modelo-Subestacion-getLatitud",
+        "kind": "OPERATION",
+        "name": "getLatitud",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-Subestacion-setLatitud": {
+        "id": "op-cls-modelo-Subestacion-setLatitud",
+        "kind": "OPERATION",
+        "name": "setLatitud",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "latitud",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Subestacion-getLongitud": {
+        "id": "op-cls-modelo-Subestacion-getLongitud",
+        "kind": "OPERATION",
+        "name": "getLongitud",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-Subestacion-setLongitud": {
+        "id": "op-cls-modelo-Subestacion-setLongitud",
+        "kind": "OPERATION",
+        "name": "setLongitud",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "longitud",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Subestacion-toString": {
+        "id": "op-cls-modelo-Subestacion-toString",
+        "kind": "OPERATION",
+        "name": "toString",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-SistemaElectrico-SistemaElectrico-empty": {
+        "id": "op-cls-modelo-SistemaElectrico-SistemaElectrico-empty",
+        "kind": "OPERATION",
+        "name": "SistemaElectrico",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-modelo-SistemaElectrico-agregarLinea": {
+        "id": "op-cls-modelo-SistemaElectrico-agregarLinea",
+        "kind": "OPERATION",
+        "name": "agregarLinea",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "linea",
+            "type": "LineaTransmision"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-SistemaElectrico-eliminarLinea": {
+        "id": "op-cls-modelo-SistemaElectrico-eliminarLinea",
+        "kind": "OPERATION",
+        "name": "eliminarLinea",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "boolean"
+      },
+      "op-cls-modelo-SistemaElectrico-actualizarLinea": {
+        "id": "op-cls-modelo-SistemaElectrico-actualizarLinea",
+        "kind": "OPERATION",
+        "name": "actualizarLinea",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "actualizada",
+            "type": "LineaTransmision"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "boolean"
+      },
+      "op-cls-modelo-SistemaElectrico-buscarLineaPorId": {
+        "id": "op-cls-modelo-SistemaElectrico-buscarLineaPorId",
+        "kind": "OPERATION",
+        "name": "buscarLineaPorId",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "LineaTransmision"
+      },
+      "op-cls-modelo-SistemaElectrico-buscarLineas": {
+        "id": "op-cls-modelo-SistemaElectrico-buscarLineas",
+        "kind": "OPERATION",
+        "name": "buscarLineas",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "texto",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<LineaTransmision>"
+      },
+      "op-cls-modelo-SistemaElectrico-filtrarPorVoltaje": {
+        "id": "op-cls-modelo-SistemaElectrico-filtrarPorVoltaje",
+        "kind": "OPERATION",
+        "name": "filtrarPorVoltaje",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "voltaje",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<LineaTransmision>"
+      },
+      "op-cls-modelo-SistemaElectrico-filtrarPorOperador": {
+        "id": "op-cls-modelo-SistemaElectrico-filtrarPorOperador",
+        "kind": "OPERATION",
+        "name": "filtrarPorOperador",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "operador",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<LineaTransmision>"
+      },
+      "op-cls-modelo-SistemaElectrico-getLineas": {
+        "id": "op-cls-modelo-SistemaElectrico-getLineas",
+        "kind": "OPERATION",
+        "name": "getLineas",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<LineaTransmision>"
+      },
+      "op-cls-modelo-SistemaElectrico-setLineas": {
+        "id": "op-cls-modelo-SistemaElectrico-setLineas",
+        "kind": "OPERATION",
+        "name": "setLineas",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "lineas",
+            "type": "List<LineaTransmision>"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-SistemaElectrico-getSubestaciones": {
+        "id": "op-cls-modelo-SistemaElectrico-getSubestaciones",
+        "kind": "OPERATION",
+        "name": "getSubestaciones",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<Subestacion>"
+      },
+      "op-cls-modelo-SistemaElectrico-getGeneradores": {
+        "id": "op-cls-modelo-SistemaElectrico-getGeneradores",
+        "kind": "OPERATION",
+        "name": "getGeneradores",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<Generador>"
+      },
+      "op-cls-modelo-SistemaElectrico-setSubestaciones": {
+        "id": "op-cls-modelo-SistemaElectrico-setSubestaciones",
+        "kind": "OPERATION",
+        "name": "setSubestaciones",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "subestaciones",
+            "type": "List<Subestacion>"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-SistemaElectrico-setGeneradores": {
+        "id": "op-cls-modelo-SistemaElectrico-setGeneradores",
+        "kind": "OPERATION",
+        "name": "setGeneradores",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "g",
+            "type": "List<Generador>"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-SistemaElectrico-buscarSubestacionPorNombre": {
+        "id": "op-cls-modelo-SistemaElectrico-buscarSubestacionPorNombre",
+        "kind": "OPERATION",
+        "name": "buscarSubestacionPorNombre",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "nombre",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "Subestacion"
+      },
+      "op-cls-modelo-SistemaElectrico-buscarGeneradorPorNombre": {
+        "id": "op-cls-modelo-SistemaElectrico-buscarGeneradorPorNombre",
+        "kind": "OPERATION",
+        "name": "buscarGeneradorPorNombre",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "nombre",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "Generador"
+      },
+      "op-cls-modelo-SistemaElectrico-calcularCapacidadTotal": {
+        "id": "op-cls-modelo-SistemaElectrico-calcularCapacidadTotal",
+        "kind": "OPERATION",
+        "name": "calcularCapacidadTotal",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-SistemaElectrico-calcularLongitudTotal": {
+        "id": "op-cls-modelo-SistemaElectrico-calcularLongitudTotal",
+        "kind": "OPERATION",
+        "name": "calcularLongitudTotal",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-SistemaElectrico-getOperadoresUnicos": {
+        "id": "op-cls-modelo-SistemaElectrico-getOperadoresUnicos",
+        "kind": "OPERATION",
+        "name": "getOperadoresUnicos",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<String>"
+      },
+      "op-cls-modelo-SistemaElectrico-getVoltajesUnicos": {
+        "id": "op-cls-modelo-SistemaElectrico-getVoltajesUnicos",
+        "kind": "OPERATION",
+        "name": "getVoltajesUnicos",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<Double>"
+      },
+      "op-cls-controlador-Controlador-Controlador-empty": {
+        "id": "op-cls-controlador-Controlador-Controlador-empty",
+        "kind": "OPERATION",
+        "name": "Controlador",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-controlador-Controlador-cargarDatosIniciales": {
+        "id": "op-cls-controlador-Controlador-cargarDatosIniciales",
+        "kind": "OPERATION",
+        "name": "cargarDatosIniciales",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "rutaLineas",
+            "type": "String"
+          },
+          {
+            "name": "rutaSubestaciones",
+            "type": "String"
+          },
+          {
+            "name": "rutaGeneradores",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-controlador-Controlador-agregarLinea": {
+        "id": "op-cls-controlador-Controlador-agregarLinea",
+        "kind": "OPERATION",
+        "name": "agregarLinea",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "nombre",
+            "type": "String"
+          },
+          {
+            "name": "operador",
+            "type": "String"
+          },
+          {
+            "name": "estado",
+            "type": "String"
+          },
+          {
+            "name": "fecha",
+            "type": "String"
+          },
+          {
+            "name": "tipoUso",
+            "type": "String"
+          },
+          {
+            "name": "subOrigen",
+            "type": "String"
+          },
+          {
+            "name": "subDestino",
+            "type": "String"
+          },
+          {
+            "name": "voltaje",
+            "type": "double"
+          },
+          {
+            "name": "corriente",
+            "type": "double"
+          },
+          {
+            "name": "longitud",
+            "type": "double"
+          },
+          {
+            "name": "municipio",
+            "type": "String"
+          },
+          {
+            "name": "departamento",
+            "type": "String"
+          },
+          {
+            "name": "subarea",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-controlador-Controlador-actualizarLinea": {
+        "id": "op-cls-controlador-Controlador-actualizarLinea",
+        "kind": "OPERATION",
+        "name": "actualizarLinea",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          },
+          {
+            "name": "nombre",
+            "type": "String"
+          },
+          {
+            "name": "operador",
+            "type": "String"
+          },
+          {
+            "name": "estado",
+            "type": "String"
+          },
+          {
+            "name": "fecha",
+            "type": "String"
+          },
+          {
+            "name": "tipoUso",
+            "type": "String"
+          },
+          {
+            "name": "subOrigen",
+            "type": "String"
+          },
+          {
+            "name": "subDestino",
+            "type": "String"
+          },
+          {
+            "name": "voltaje",
+            "type": "double"
+          },
+          {
+            "name": "corriente",
+            "type": "double"
+          },
+          {
+            "name": "longitud",
+            "type": "double"
+          },
+          {
+            "name": "municipio",
+            "type": "String"
+          },
+          {
+            "name": "departamento",
+            "type": "String"
+          },
+          {
+            "name": "subarea",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-controlador-Controlador-eliminarLinea": {
+        "id": "op-cls-controlador-Controlador-eliminarLinea",
+        "kind": "OPERATION",
+        "name": "eliminarLinea",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-controlador-Controlador-obtenerTodasLineas": {
+        "id": "op-cls-controlador-Controlador-obtenerTodasLineas",
+        "kind": "OPERATION",
+        "name": "obtenerTodasLineas",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<LineaTransmision>"
+      },
+      "op-cls-controlador-Controlador-buscarLineas": {
+        "id": "op-cls-controlador-Controlador-buscarLineas",
+        "kind": "OPERATION",
+        "name": "buscarLineas",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "texto",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<LineaTransmision>"
+      },
+      "op-cls-controlador-Controlador-filtrarPorVoltaje": {
+        "id": "op-cls-controlador-Controlador-filtrarPorVoltaje",
+        "kind": "OPERATION",
+        "name": "filtrarPorVoltaje",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "voltaje",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<LineaTransmision>"
+      },
+      "op-cls-controlador-Controlador-filtrarPorOperador": {
+        "id": "op-cls-controlador-Controlador-filtrarPorOperador",
+        "kind": "OPERATION",
+        "name": "filtrarPorOperador",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "operador",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<LineaTransmision>"
+      },
+      "op-cls-controlador-Controlador-guardarLineas": {
+        "id": "op-cls-controlador-Controlador-guardarLineas",
+        "kind": "OPERATION",
+        "name": "guardarLineas",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "ruta",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-controlador-Controlador-cargarLineas": {
+        "id": "op-cls-controlador-Controlador-cargarLineas",
+        "kind": "OPERATION",
+        "name": "cargarLineas",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "ruta",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-controlador-Controlador-obtenerSubestaciones": {
+        "id": "op-cls-controlador-Controlador-obtenerSubestaciones",
+        "kind": "OPERATION",
+        "name": "obtenerSubestaciones",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<Subestacion>"
+      },
+      "op-cls-controlador-Controlador-obtenerGeneradores": {
+        "id": "op-cls-controlador-Controlador-obtenerGeneradores",
+        "kind": "OPERATION",
+        "name": "obtenerGeneradores",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<Generador>"
+      },
+      "op-cls-controlador-Controlador-getCapacidadTotal": {
+        "id": "op-cls-controlador-Controlador-getCapacidadTotal",
+        "kind": "OPERATION",
+        "name": "getCapacidadTotal",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-controlador-Controlador-getLongitudTotal": {
+        "id": "op-cls-controlador-Controlador-getLongitudTotal",
+        "kind": "OPERATION",
+        "name": "getLongitudTotal",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-controlador-Controlador-getOperadores": {
+        "id": "op-cls-controlador-Controlador-getOperadores",
+        "kind": "OPERATION",
+        "name": "getOperadores",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<String>"
+      },
+      "op-cls-controlador-Controlador-getVoltajes": {
+        "id": "op-cls-controlador-Controlador-getVoltajes",
+        "kind": "OPERATION",
+        "name": "getVoltajes",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<Double>"
+      },
+      "op-cls-controlador-Controlador-getTotalLineas": {
+        "id": "op-cls-controlador-Controlador-getTotalLineas",
+        "kind": "OPERATION",
+        "name": "getTotalLineas",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "int"
+      },
+      "op-cls-persistencia-GestorCSV-guardarLineas": {
+        "id": "op-cls-persistencia-GestorCSV-guardarLineas",
+        "kind": "OPERATION",
+        "name": "guardarLineas",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "lineas",
+            "type": "List<LineaTransmision>"
+          },
+          {
+            "name": "ruta",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-persistencia-GestorCSV-cargarLineas": {
+        "id": "op-cls-persistencia-GestorCSV-cargarLineas",
+        "kind": "OPERATION",
+        "name": "cargarLineas",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "ruta",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<LineaTransmision>"
+      },
+      "op-cls-persistencia-GestorCSV-guardarSubestaciones": {
+        "id": "op-cls-persistencia-GestorCSV-guardarSubestaciones",
+        "kind": "OPERATION",
+        "name": "guardarSubestaciones",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "subs",
+            "type": "List<Subestacion>"
+          },
+          {
+            "name": "ruta",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-persistencia-GestorCSV-cargarSubestaciones": {
+        "id": "op-cls-persistencia-GestorCSV-cargarSubestaciones",
+        "kind": "OPERATION",
+        "name": "cargarSubestaciones",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "ruta",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<Subestacion>"
+      },
+      "op-cls-persistencia-GestorCSV-guardarGeneradores": {
+        "id": "op-cls-persistencia-GestorCSV-guardarGeneradores",
+        "kind": "OPERATION",
+        "name": "guardarGeneradores",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "gens",
+            "type": "List<modelo.Generador>"
+          },
+          {
+            "name": "ruta",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-persistencia-GestorCSV-cargarGeneradores": {
+        "id": "op-cls-persistencia-GestorCSV-cargarGeneradores",
+        "kind": "OPERATION",
+        "name": "cargarGeneradores",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "ruta",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "List<modelo.Generador>"
+      },
+      "op-cls-persistencia-GestorCSV-escapar": {
+        "id": "op-cls-persistencia-GestorCSV-escapar",
+        "kind": "OPERATION",
+        "name": "escapar",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "valor",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-persistencia-GestorCSV-parsearCSV": {
+        "id": "op-cls-persistencia-GestorCSV-parsearCSV",
+        "kind": "OPERATION",
+        "name": "parsearCSV",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "linea",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String[]"
+      },
+      "op-cls-persistencia-GestorCSV-parsearDouble": {
+        "id": "op-cls-persistencia-GestorCSV-parsearDouble",
+        "kind": "OPERATION",
+        "name": "parsearDouble",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "s",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-persistencia-GestorCSV-parsearInt": {
+        "id": "op-cls-persistencia-GestorCSV-parsearInt",
+        "kind": "OPERATION",
+        "name": "parsearInt",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "s",
+            "type": "String"
+          },
+          {
+            "name": "defecto",
+            "type": "int"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "int"
+      },
+      "op-cls-default-Main-main": {
+        "id": "op-cls-default-Main-main",
+        "kind": "OPERATION",
+        "name": "main",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "args",
+            "type": "String[]"
+          }
+        ],
+        "isStatic": true,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-VentanaPrincipal": {
+        "id": "op-cls-vista-VentanaPrincipal-VentanaPrincipal",
+        "kind": "OPERATION",
+        "name": "VentanaPrincipal",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "controlador",
+            "type": "Controlador"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-vista-VentanaPrincipal-configurarVentana": {
+        "id": "op-cls-vista-VentanaPrincipal-configurarVentana",
+        "kind": "OPERATION",
+        "name": "configurarVentana",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-construirUI": {
+        "id": "op-cls-vista-VentanaPrincipal-construirUI",
+        "kind": "OPERATION",
+        "name": "construirUI",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-crearBarraHerramientas": {
+        "id": "op-cls-vista-VentanaPrincipal-crearBarraHerramientas",
+        "kind": "OPERATION",
+        "name": "crearBarraHerramientas",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JToolBar"
+      },
+      "op-cls-vista-VentanaPrincipal-botonToolbar": {
+        "id": "op-cls-vista-VentanaPrincipal-botonToolbar",
+        "kind": "OPERATION",
+        "name": "botonToolbar",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "texto",
+            "type": "String"
+          },
+          {
+            "name": "bg",
+            "type": "Color"
+          },
+          {
+            "name": "al",
+            "type": "ActionListener"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JButton"
+      },
+      "op-cls-vista-VentanaPrincipal-crearPanelIzquierdo": {
+        "id": "op-cls-vista-VentanaPrincipal-crearPanelIzquierdo",
+        "kind": "OPERATION",
+        "name": "crearPanelIzquierdo",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JPanel"
+      },
+      "op-cls-vista-VentanaPrincipal-crearPanelFiltros": {
+        "id": "op-cls-vista-VentanaPrincipal-crearPanelFiltros",
+        "kind": "OPERATION",
+        "name": "crearPanelFiltros",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JPanel"
+      },
+      "op-cls-vista-VentanaPrincipal-crearTabla": {
+        "id": "op-cls-vista-VentanaPrincipal-crearTabla",
+        "kind": "OPERATION",
+        "name": "crearTabla",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JScrollPane"
+      },
+      "op-cls-vista-VentanaPrincipal-crearPanelMapa": {
+        "id": "op-cls-vista-VentanaPrincipal-crearPanelMapa",
+        "kind": "OPERATION",
+        "name": "crearPanelMapa",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JPanel"
+      },
+      "op-cls-vista-VentanaPrincipal-crearBarraEstado": {
+        "id": "op-cls-vista-VentanaPrincipal-crearBarraEstado",
+        "kind": "OPERATION",
+        "name": "crearBarraEstado",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JPanel"
+      },
+      "op-cls-vista-VentanaPrincipal-crearMenuBar": {
+        "id": "op-cls-vista-VentanaPrincipal-crearMenuBar",
+        "kind": "OPERATION",
+        "name": "crearMenuBar",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JMenuBar"
+      },
+      "op-cls-vista-VentanaPrincipal-menuItem": {
+        "id": "op-cls-vista-VentanaPrincipal-menuItem",
+        "kind": "OPERATION",
+        "name": "menuItem",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "texto",
+            "type": "String"
+          },
+          {
+            "name": "al",
+            "type": "ActionListener"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JMenuItem"
+      },
+      "op-cls-vista-VentanaPrincipal-accionNueva": {
+        "id": "op-cls-vista-VentanaPrincipal-accionNueva",
+        "kind": "OPERATION",
+        "name": "accionNueva",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-accionEditar": {
+        "id": "op-cls-vista-VentanaPrincipal-accionEditar",
+        "kind": "OPERATION",
+        "name": "accionEditar",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-accionEliminar": {
+        "id": "op-cls-vista-VentanaPrincipal-accionEliminar",
+        "kind": "OPERATION",
+        "name": "accionEliminar",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-accionGuardar": {
+        "id": "op-cls-vista-VentanaPrincipal-accionGuardar",
+        "kind": "OPERATION",
+        "name": "accionGuardar",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-actualizarTabla": {
+        "id": "op-cls-vista-VentanaPrincipal-actualizarTabla",
+        "kind": "OPERATION",
+        "name": "actualizarTabla",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-actualizarMapa": {
+        "id": "op-cls-vista-VentanaPrincipal-actualizarMapa",
+        "kind": "OPERATION",
+        "name": "actualizarMapa",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-actualizarEstadisticas": {
+        "id": "op-cls-vista-VentanaPrincipal-actualizarEstadisticas",
+        "kind": "OPERATION",
+        "name": "actualizarEstadisticas",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-mostrarEstadisticas": {
+        "id": "op-cls-vista-VentanaPrincipal-mostrarEstadisticas",
+        "kind": "OPERATION",
+        "name": "mostrarEstadisticas",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-VentanaPrincipal-cargarDatosIniciales": {
+        "id": "op-cls-vista-VentanaPrincipal-cargarDatosIniciales",
+        "kind": "OPERATION",
+        "name": "cargarDatosIniciales",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-DialogoLinea-DialogoLinea": {
+        "id": "op-cls-vista-DialogoLinea-DialogoLinea",
+        "kind": "OPERATION",
+        "name": "DialogoLinea",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "parent",
+            "type": "Frame"
+          },
+          {
+            "name": "titulo",
+            "type": "String"
+          },
+          {
+            "name": "linea",
+            "type": "LineaTransmision"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-vista-DialogoLinea-crearFormulario": {
+        "id": "op-cls-vista-DialogoLinea-crearFormulario",
+        "kind": "OPERATION",
+        "name": "crearFormulario",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JPanel"
+      },
+      "op-cls-vista-DialogoLinea-crearBotones": {
+        "id": "op-cls-vista-DialogoLinea-crearBotones",
+        "kind": "OPERATION",
+        "name": "crearBotones",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JPanel"
+      },
+      "op-cls-vista-DialogoLinea-actualizarCapacidad": {
+        "id": "op-cls-vista-DialogoLinea-actualizarCapacidad",
+        "kind": "OPERATION",
+        "name": "actualizarCapacidad",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-DialogoLinea-validar": {
+        "id": "op-cls-vista-DialogoLinea-validar",
+        "kind": "OPERATION",
+        "name": "validar",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "boolean"
+      },
+      "op-cls-vista-DialogoLinea-mostrarError": {
+        "id": "op-cls-vista-DialogoLinea-mostrarError",
+        "kind": "OPERATION",
+        "name": "mostrarError",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "msg",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-DialogoLinea-cargarDatos": {
+        "id": "op-cls-vista-DialogoLinea-cargarDatos",
+        "kind": "OPERATION",
+        "name": "cargarDatos",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "l",
+            "type": "LineaTransmision"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-DialogoLinea-isConfirmado": {
+        "id": "op-cls-vista-DialogoLinea-isConfirmado",
+        "kind": "OPERATION",
+        "name": "isConfirmado",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "boolean"
+      },
+      "op-cls-vista-DialogoLinea-getLinea": {
+        "id": "op-cls-vista-DialogoLinea-getLinea",
+        "kind": "OPERATION",
+        "name": "getLinea",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "LineaTransmision"
+      },
+      "op-cls-vista-PanelMapa-PanelMapa-empty": {
+        "id": "op-cls-vista-PanelMapa-PanelMapa-empty",
+        "kind": "OPERATION",
+        "name": "PanelMapa",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-vista-PanelMapa-inicializarMapa": {
+        "id": "op-cls-vista-PanelMapa-inicializarMapa",
+        "kind": "OPERATION",
+        "name": "inicializarMapa",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-PanelMapa-actualizarDatos": {
+        "id": "op-cls-vista-PanelMapa-actualizarDatos",
+        "kind": "OPERATION",
+        "name": "actualizarDatos",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "subs",
+            "type": "List<Subestacion>"
+          },
+          {
+            "name": "generadores",
+            "type": "List<Generador>"
+          },
+          {
+            "name": "lineas",
+            "type": "List<LineaTransmision>"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-PanelMapa-refrescarPintores": {
+        "id": "op-cls-vista-PanelMapa-refrescarPintores",
+        "kind": "OPERATION",
+        "name": "refrescarPintores",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-vista-PanelMapa-buscarSub": {
+        "id": "op-cls-vista-PanelMapa-buscarSub",
+        "kind": "OPERATION",
+        "name": "buscarSub",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "nombre",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "Subestacion"
+      },
+      "op-cls-vista-PanelMapa-buscarGen": {
+        "id": "op-cls-vista-PanelMapa-buscarGen",
+        "kind": "OPERATION",
+        "name": "buscarGen",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "nombre",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "Generador"
+      },
+      "op-cls-vista-PanelMapa-crearLeyenda": {
+        "id": "op-cls-vista-PanelMapa-crearLeyenda",
+        "kind": "OPERATION",
+        "name": "crearLeyenda",
+        "visibility": "private",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "JPanel"
+      },
+      "op-cls-vista-PanelMapa-agregarItemLeyenda": {
+        "id": "op-cls-vista-PanelMapa-agregarItemLeyenda",
+        "kind": "OPERATION",
+        "name": "agregarItemLeyenda",
+        "visibility": "private",
+        "parameters": [
+          {
+            "name": "panel",
+            "type": "JPanel"
+          },
+          {
+            "name": "texto",
+            "type": "String"
+          },
+          {
+            "name": "color",
+            "type": "Color"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Generador-Generador": {
+        "id": "op-cls-modelo-Generador-Generador",
+        "kind": "OPERATION",
+        "name": "Generador",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          },
+          {
+            "name": "nombre",
+            "type": "String"
+          },
+          {
+            "name": "municipio",
+            "type": "String"
+          },
+          {
+            "name": "departamento",
+            "type": "String"
+          },
+          {
+            "name": "latitud",
+            "type": "double"
+          },
+          {
+            "name": "longitud",
+            "type": "double"
+          },
+          {
+            "name": "tipoGeneracion",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false
+      },
+      "op-cls-modelo-Generador-getId": {
+        "id": "op-cls-modelo-Generador-getId",
+        "kind": "OPERATION",
+        "name": "getId",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "int"
+      },
+      "op-cls-modelo-Generador-setId": {
+        "id": "op-cls-modelo-Generador-setId",
+        "kind": "OPERATION",
+        "name": "setId",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Generador-getNombre": {
+        "id": "op-cls-modelo-Generador-getNombre",
+        "kind": "OPERATION",
+        "name": "getNombre",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-Generador-setNombre": {
+        "id": "op-cls-modelo-Generador-setNombre",
+        "kind": "OPERATION",
+        "name": "setNombre",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "nombre",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Generador-getMunicipio": {
+        "id": "op-cls-modelo-Generador-getMunicipio",
+        "kind": "OPERATION",
+        "name": "getMunicipio",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-Generador-setMunicipio": {
+        "id": "op-cls-modelo-Generador-setMunicipio",
+        "kind": "OPERATION",
+        "name": "setMunicipio",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "municipio",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Generador-getDepartamento": {
+        "id": "op-cls-modelo-Generador-getDepartamento",
+        "kind": "OPERATION",
+        "name": "getDepartamento",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-Generador-setDepartamento": {
+        "id": "op-cls-modelo-Generador-setDepartamento",
+        "kind": "OPERATION",
+        "name": "setDepartamento",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "departamento",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Generador-getLatitud": {
+        "id": "op-cls-modelo-Generador-getLatitud",
+        "kind": "OPERATION",
+        "name": "getLatitud",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-Generador-setLatitud": {
+        "id": "op-cls-modelo-Generador-setLatitud",
+        "kind": "OPERATION",
+        "name": "setLatitud",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "latitud",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Generador-getLongitud": {
+        "id": "op-cls-modelo-Generador-getLongitud",
+        "kind": "OPERATION",
+        "name": "getLongitud",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "double"
+      },
+      "op-cls-modelo-Generador-setLongitud": {
+        "id": "op-cls-modelo-Generador-setLongitud",
+        "kind": "OPERATION",
+        "name": "setLongitud",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "longitud",
+            "type": "double"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Generador-setTipoGeneracion": {
+        "id": "op-cls-modelo-Generador-setTipoGeneracion",
+        "kind": "OPERATION",
+        "name": "setTipoGeneracion",
+        "visibility": "public",
+        "parameters": [
+          {
+            "name": "tipoGeneracion",
+            "type": "String"
+          }
+        ],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "void"
+      },
+      "op-cls-modelo-Generador-getTipoGeneracion": {
+        "id": "op-cls-modelo-Generador-getTipoGeneracion",
+        "kind": "OPERATION",
+        "name": "getTipoGeneracion",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      },
+      "op-cls-modelo-Generador-toString": {
+        "id": "op-cls-modelo-Generador-toString",
+        "kind": "OPERATION",
+        "name": "toString",
+        "visibility": "public",
+        "parameters": [],
+        "isStatic": false,
+        "isAbstract": false,
+        "returnType": "String"
+      }
+    },
+    "actors": {},
+    "useCases": {},
+    "activityNodes": {},
+    "objectInstances": {},
+    "components": {},
+    "nodes": {},
+    "artifacts": {},
+    "relations": {
+      "rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-LineaTransmision": {
+        "id": "rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-LineaTransmision",
+        "kind": "COMPOSITION",
+        "sourceId": "cls-modelo-SistemaElectrico",
+        "targetId": "cls-modelo-LineaTransmision",
+        "sourceEnd": {
+          "elementId": "cls-modelo-SistemaElectrico",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "composite"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-LineaTransmision",
+          "multiplicity": "*",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-Subestacion": {
+        "id": "rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-Subestacion",
+        "kind": "COMPOSITION",
+        "sourceId": "cls-modelo-SistemaElectrico",
+        "targetId": "cls-modelo-Subestacion",
+        "sourceEnd": {
+          "elementId": "cls-modelo-SistemaElectrico",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "composite"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-Subestacion",
+          "multiplicity": "*",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-ASSOCIATION-cls-controlador-Controlador-cls-modelo-SistemaElectrico": {
+        "id": "rel-ASSOCIATION-cls-controlador-Controlador-cls-modelo-SistemaElectrico",
+        "kind": "ASSOCIATION",
+        "sourceId": "cls-controlador-Controlador",
+        "targetId": "cls-modelo-SistemaElectrico",
+        "sourceEnd": {
+          "elementId": "cls-controlador-Controlador",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none",
+          "role": "sistema"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-SistemaElectrico",
+          "multiplicity": "1",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-ASSOCIATION-cls-controlador-Controlador-cls-persistencia-GestorCSV": {
+        "id": "rel-ASSOCIATION-cls-controlador-Controlador-cls-persistencia-GestorCSV",
+        "kind": "ASSOCIATION",
+        "sourceId": "cls-controlador-Controlador",
+        "targetId": "cls-persistencia-GestorCSV",
+        "sourceEnd": {
+          "elementId": "cls-controlador-Controlador",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none",
+          "role": "gestorCSV"
+        },
+        "targetEnd": {
+          "elementId": "cls-persistencia-GestorCSV",
+          "multiplicity": "1",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-default-Main-cls-controlador-Controlador": {
+        "id": "rel-DEPENDENCY-cls-default-Main-cls-controlador-Controlador",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-default-Main",
+        "targetId": "cls-controlador-Controlador",
+        "sourceEnd": {
+          "elementId": "cls-default-Main",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-controlador-Controlador",
+          "multiplicity": "1",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-default-Main-cls-vista-VentanaPrincipal": {
+        "id": "rel-DEPENDENCY-cls-default-Main-cls-vista-VentanaPrincipal",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-default-Main",
+        "targetId": "cls-vista-VentanaPrincipal",
+        "sourceEnd": {
+          "elementId": "cls-default-Main",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-vista-VentanaPrincipal",
+          "multiplicity": "1",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-vista-VentanaPrincipal-cls-controlador-Controlador": {
+        "id": "rel-DEPENDENCY-cls-vista-VentanaPrincipal-cls-controlador-Controlador",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-vista-VentanaPrincipal",
+        "targetId": "cls-controlador-Controlador",
+        "sourceEnd": {
+          "elementId": "cls-vista-VentanaPrincipal",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-controlador-Controlador",
+          "multiplicity": "1",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-vista-DialogoLinea-cls-modelo-LineaTransmision": {
+        "id": "rel-DEPENDENCY-cls-vista-DialogoLinea-cls-modelo-LineaTransmision",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-vista-DialogoLinea",
+        "targetId": "cls-modelo-LineaTransmision",
+        "sourceEnd": {
+          "elementId": "cls-vista-DialogoLinea",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-LineaTransmision",
+          "multiplicity": "0..1",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-Subestacion": {
+        "id": "rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-Subestacion",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-vista-PanelMapa",
+        "targetId": "cls-modelo-Subestacion",
+        "sourceEnd": {
+          "elementId": "cls-vista-PanelMapa",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-Subestacion",
+          "multiplicity": "*",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-LineaTransmision": {
+        "id": "rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-LineaTransmision",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-vista-PanelMapa",
+        "targetId": "cls-modelo-LineaTransmision",
+        "sourceEnd": {
+          "elementId": "cls-vista-PanelMapa",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-LineaTransmision",
+          "multiplicity": "*",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-LineaTransmision": {
+        "id": "rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-LineaTransmision",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-persistencia-GestorCSV",
+        "targetId": "cls-modelo-LineaTransmision",
+        "sourceEnd": {
+          "elementId": "cls-persistencia-GestorCSV",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-LineaTransmision",
+          "multiplicity": "*",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-Subestacion": {
+        "id": "rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-Subestacion",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-persistencia-GestorCSV",
+        "targetId": "cls-modelo-Subestacion",
+        "sourceEnd": {
+          "elementId": "cls-persistencia-GestorCSV",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-Subestacion",
+          "multiplicity": "*",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-Generador": {
+        "id": "rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-Generador",
+        "kind": "COMPOSITION",
+        "sourceId": "cls-modelo-SistemaElectrico",
+        "targetId": "cls-modelo-Generador",
+        "sourceEnd": {
+          "elementId": "cls-modelo-SistemaElectrico",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "composite"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-Generador",
+          "multiplicity": "*",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-Generador": {
+        "id": "rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-Generador",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-vista-PanelMapa",
+        "targetId": "cls-modelo-Generador",
+        "sourceEnd": {
+          "elementId": "cls-vista-PanelMapa",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-Generador",
+          "multiplicity": "*",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-Generador": {
+        "id": "rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-Generador",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-persistencia-GestorCSV",
+        "targetId": "cls-modelo-Generador",
+        "sourceEnd": {
+          "elementId": "cls-persistencia-GestorCSV",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-modelo-Generador",
+          "multiplicity": "*",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-ASSOCIATION-cls-vista-VentanaPrincipal-cls-vista-PanelMapa": {
+        "id": "rel-ASSOCIATION-cls-vista-VentanaPrincipal-cls-vista-PanelMapa",
+        "kind": "ASSOCIATION",
+        "sourceId": "cls-vista-VentanaPrincipal",
+        "targetId": "cls-vista-PanelMapa",
+        "sourceEnd": {
+          "elementId": "cls-vista-VentanaPrincipal",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none",
+          "role": "panelMapa"
+        },
+        "targetEnd": {
+          "elementId": "cls-vista-PanelMapa",
+          "multiplicity": "1",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      },
+      "rel-DEPENDENCY-cls-vista-VentanaPrincipal-cls-vista-DialogoLinea": {
+        "id": "rel-DEPENDENCY-cls-vista-VentanaPrincipal-cls-vista-DialogoLinea",
+        "kind": "DEPENDENCY",
+        "sourceId": "cls-vista-VentanaPrincipal",
+        "targetId": "cls-vista-DialogoLinea",
+        "sourceEnd": {
+          "elementId": "cls-vista-VentanaPrincipal",
+          "multiplicity": "1",
+          "isNavigable": true,
+          "aggregation": "none"
+        },
+        "targetEnd": {
+          "elementId": "cls-vista-DialogoLinea",
+          "multiplicity": "0..1",
+          "isNavigable": false,
+          "aggregation": "none"
+        }
+      }
+    },
+    "createdAt": 1782000000000,
+    "updatedAt": 1782351169070
+  },
+  "view": {
+    "diagramId": "diagram-red-electrica-santander",
+    "nodes": [
+      {
+        "id": "node-cls-default-Main",
+        "elementId": "cls-default-Main",
+        "x": 400,
+        "y": 80,
+        "width": 220
+      },
+      {
+        "id": "node-cls-vista-VentanaPrincipal",
+        "elementId": "cls-vista-VentanaPrincipal",
+        "x": 80,
+        "y": 280,
+        "width": 220
+      },
+      {
+        "id": "node-cls-vista-DialogoLinea",
+        "elementId": "cls-vista-DialogoLinea",
+        "x": 400,
+        "y": 280,
+        "width": 220
+      },
+      {
+        "id": "node-cls-vista-PanelMapa",
+        "elementId": "cls-vista-PanelMapa",
+        "x": 720,
+        "y": 280,
+        "width": 220
+      },
+      {
+        "id": "node-cls-controlador-Controlador",
+        "elementId": "cls-controlador-Controlador",
+        "x": 400,
+        "y": 480,
+        "width": 220
+      },
+      {
+        "id": "node-cls-persistencia-GestorCSV",
+        "elementId": "cls-persistencia-GestorCSV",
+        "x": 400,
+        "y": 680,
+        "width": 220
+      },
+      {
+        "id": "node-cls-modelo-LineaTransmision",
+        "elementId": "cls-modelo-LineaTransmision",
+        "x": 400,
+        "y": 880,
+        "width": 220
+      },
+      {
+        "id": "node-cls-modelo-Subestacion",
+        "elementId": "cls-modelo-Subestacion",
+        "x": 1040,
+        "y": 880,
+        "width": 220
+      },
+      {
+        "id": "node-cls-modelo-SistemaElectrico",
+        "elementId": "cls-modelo-SistemaElectrico",
+        "x": 720,
+        "y": 880,
+        "width": 220
+      },
+      {
+        "id": "node-cls-modelo-Generador",
+        "elementId": "cls-modelo-Generador",
+        "x": 80,
+        "y": 880,
+        "width": 220
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-LineaTransmision",
+        "relationId": "rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-LineaTransmision",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "*"
+      },
+      {
+        "id": "edge-rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-Subestacion",
+        "relationId": "rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-Subestacion",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "*"
+      },
+      {
+        "id": "edge-rel-ASSOCIATION-cls-controlador-Controlador-cls-modelo-SistemaElectrico",
+        "relationId": "rel-ASSOCIATION-cls-controlador-Controlador-cls-modelo-SistemaElectrico",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "1",
+        "sourceRole": "sistema"
+      },
+      {
+        "id": "edge-rel-ASSOCIATION-cls-controlador-Controlador-cls-persistencia-GestorCSV",
+        "relationId": "rel-ASSOCIATION-cls-controlador-Controlador-cls-persistencia-GestorCSV",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "1",
+        "sourceRole": "gestorCSV"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-default-Main-cls-controlador-Controlador",
+        "relationId": "rel-DEPENDENCY-cls-default-Main-cls-controlador-Controlador",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "1"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-default-Main-cls-vista-VentanaPrincipal",
+        "relationId": "rel-DEPENDENCY-cls-default-Main-cls-vista-VentanaPrincipal",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "1"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-vista-VentanaPrincipal-cls-controlador-Controlador",
+        "relationId": "rel-DEPENDENCY-cls-vista-VentanaPrincipal-cls-controlador-Controlador",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "1"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-vista-DialogoLinea-cls-modelo-LineaTransmision",
+        "relationId": "rel-DEPENDENCY-cls-vista-DialogoLinea-cls-modelo-LineaTransmision",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "0..1"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-Subestacion",
+        "relationId": "rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-Subestacion",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "*"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-LineaTransmision",
+        "relationId": "rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-LineaTransmision",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "*"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-LineaTransmision",
+        "relationId": "rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-LineaTransmision",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "*"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-Subestacion",
+        "relationId": "rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-Subestacion",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "*"
+      },
+      {
+        "id": "edge-rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-Generador",
+        "relationId": "rel-COMPOSITION-cls-modelo-SistemaElectrico-cls-modelo-Generador",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "*"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-Generador",
+        "relationId": "rel-DEPENDENCY-cls-vista-PanelMapa-cls-modelo-Generador",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "*"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-Generador",
+        "relationId": "rel-DEPENDENCY-cls-persistencia-GestorCSV-cls-modelo-Generador",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "*"
+      },
+      {
+        "id": "edge-rel-ASSOCIATION-cls-vista-VentanaPrincipal-cls-vista-PanelMapa",
+        "relationId": "rel-ASSOCIATION-cls-vista-VentanaPrincipal-cls-vista-PanelMapa",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "1",
+        "sourceRole": "panelMapa"
+      },
+      {
+        "id": "edge-rel-DEPENDENCY-cls-vista-VentanaPrincipal-cls-vista-DialogoLinea",
+        "relationId": "rel-DEPENDENCY-cls-vista-VentanaPrincipal-cls-vista-DialogoLinea",
+        "waypoints": [],
+        "sourceMultiplicity": "1",
+        "targetMultiplicity": "0..1"
+      }
+    ]
+  }
+}
